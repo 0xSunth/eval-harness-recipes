@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx
+captured_at: 2026-09-24
+page_modified: 2026-08-24
+recipe_name: Poulet yassa sénégalais
+servings_displayed: 4

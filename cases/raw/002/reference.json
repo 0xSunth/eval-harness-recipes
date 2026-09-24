@@ -1,0 +1,377 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/plat-principal/",
+                        "name": "Plat principal"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/plat-unique/",
+                        "name": "Plat unique"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/rougail/",
+                        "name": "Rougail"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx",
+                        "name": "Rougail saucisse"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#breadcrumb"
+            },
+            "name": "Rougail saucisse : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2026-07-27T05:01:59+02:00",
+            "lastReviewed": "2026-07-27",
+            "description": "Recette Rougail saucisse : la meilleure recette rapide et facile : 4 personnes, 40 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 431 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20200219/107902_w1500h844c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-et-legumes_165934.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail_11401.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-thermomix_383577.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-cookeo_383573.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-monsieur-cuisine_383576.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-companion_383574.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisses-fumees_325878.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisses_26981.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisses-aux-chipolatas_18529.aspx",
+                "https://www.marmiton.org/astuces/pour-qu-elles-soient-cuites-a-coeur-voici-le-temps-de-cuisson-exact-des-saucisses-au-barbecue-s4112478.html",
+                "https://www.marmiton.org/focus-ingredient/rappel-massif-dans-plusieurs-boucheries-et-rotisseries-a-cause-d-une-contamination-a-la-salmonelle-il-s-agit-de-saucisses-s4130718.html",
+                "https://www.marmiton.org/none/facile-et-pas-cher-que-faire-avec-de-la-chair-a-saucisse-s4037770.html",
+                "https://www.marmiton.org/recettes/index/ingredient/saucisses",
+                "https://www.marmiton.org/none/4-erreurs-a-ne-pas-commettre-lorsqu-on-cuit-des-saucisses-au-barb-s4025920.html",
+                "https://www.marmiton.org/none/est-ce-vraiment-une-bonne-idee-de-piquer-ses-saucisses-avant-de-les-cuire-au-barbecue-s4068146.html",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisses_392377.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-facile_58748.aspx",
+                "https://www.marmiton.org/recettes/recette_rougail-saucisse-rapide-au-airfryer_538454.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20200219/107902_w1500h844c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20200219/107902_w1500h844c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#primaryimage",
+            "caption": "Rougail saucisse : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#video",
+            "name": "Rougail saucisses",
+            "description": "Rougail saucisses",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20180615/v539936_22851-rougail-saucisse-1080-1080-fr-pad-mp4_w854h854c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20180615/v539936_22851-rougail-saucisse-1080-1080-fr-pad-mp4_HD.mp4",
+            "uploadDate": "2006-10-23T11:43:00+02:00",
+            "duration": "PT1M5S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx",
+            "numberOfItems": 14,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail_11401.aspx",
+                    "name": "Rougail",
+                    "image": "https://assets.afcdn.com/recipe/20190430/91659_w768h432cx384cy631cxt0cyt0cxb768cyb1262.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-thermomix_383577.aspx",
+                    "name": "Rougail saucisse au Thermomix",
+                    "image": "https://assets.afcdn.com/recipe/20191204/103469_w8660h4871cx4787cy2575cxt0cyt0cxb8660cyb5773.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-cookeo_383573.aspx",
+                    "name": "Rougail saucisse au Cookeo",
+                    "image": "https://assets.afcdn.com/recipe/20191204/103464_w8660h4871cx4925cy1987cxt0cyt0cxb8660cyb5773.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-monsieur-cuisine_383576.aspx",
+                    "name": "Rougail saucisse au Monsieur Cuisine",
+                    "image": "https://assets.afcdn.com/recipe/20191204/103468_w8660h4871cx4487cy2325cxt0cyt0cxb8660cyb5773.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse-au-companion_383574.aspx",
+                    "name": "Rougail saucisse au Companion",
+                    "image": "https://assets.afcdn.com/recipe/20191204/103466_w8660h4871cx4587cy2512cxt0cyt0cxb8660cyb5773.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisses-fumees_325878.aspx",
+                    "name": "rougail saucisses fum\u00e9es",
+                    "image": "https://assets.afcdn.com/recipe/20150217/55592_w800h450cx400cy245.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisses_26981.aspx",
+                    "name": "Rougail saucisses de Toulouse",
+                    "image": "https://assets.afcdn.com/recipe/20170925/72372_w4032h2268cx2016cy1187cxt0cyt0cxb4032cyb2375.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/astuces/pour-qu-elles-soient-cuites-a-coeur-voici-le-temps-de-cuisson-exact-des-saucisses-au-barbecue-s4112478.html",
+                    "name": "Pour qu'elles soient cuites \u00e0 c\u0153ur, voici le temps de cuisson exact des saucisses au barbecue",
+                    "image": "https://assets.afcdn.com/story/20250506/2301424_w5500h3094cx2750cy1830cxt0cyt0cxb5500cyb3658.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/focus-ingredient/rappel-massif-dans-plusieurs-boucheries-et-rotisseries-a-cause-d-une-contamination-a-la-salmonelle-il-s-agit-de-saucisses-s4130718.html",
+                    "name": "Rappel massif dans plusieurs boucheries et r\u00f4tisseries \u00e0 cause d\u2019une contamination \u00e0 la salmonelle : il s\u2019agit de saucisses",
+                    "image": "https://assets.afcdn.com/story/20260424/2323462_w1280h720cx640cy360cxt0cyt0cxb1280cyb720.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/none/facile-et-pas-cher-que-faire-avec-de-la-chair-a-saucisse-s4037770.html",
+                    "name": "Facile et pas cher : que faire avec de la chair \u00e0 saucisse ?",
+                    "image": "https://assets.afcdn.com/story/20220303/2163255_w2121h1193cx1061cy707cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/none/4-erreurs-a-ne-pas-commettre-lorsqu-on-cuit-des-saucisses-au-barb-s4025920.html",
+                    "name": "4 erreurs \u00e0 ne pas commettre lorsqu\u2019on cuit des saucisses au barbecue",
+                    "image": "https://assets.afcdn.com/story/20210621/2125242_w2000h1125cx1000cy750cxt0cyt0cxb2000cyb1500.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/none/est-ce-vraiment-une-bonne-idee-de-piquer-ses-saucisses-avant-de-les-cuire-au-barbecue-s4068146.html",
+                    "name": "Est-ce vraiment une bonne id\u00e9e de piquer ses saucisses avant de les cuire au barbecue ?",
+                    "image": "https://assets.afcdn.com/story/20230728/2224909_w1512h851cx756cy503cxt0cyt0cxb1512cyb1006.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisses_392377.aspx",
+                    "name": "Rougail saucisses",
+                    "image": "https://assets.afcdn.com/recipe/20200429/110097_w2541h1429cx1418cy1081cxt0cyt0cxb2541cyb1772.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://www.marmiton.org/recettes/recette_rougail-saucisse-rapide-au-airfryer_538454.aspx",
+                    "name": "Rougail saucisse rapide au Airfryer",
+                    "image": "https://assets.afcdn.com/recipe/20250309/158876_w8688h4887cx4344cy2896cxt0cyt0cxb8688cyb5792.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx"
+            },
+            "name": "Rougail saucisse : la meilleure recette",
+            "recipeCategory": "Plat principal",
+            "image": [
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h1024c1cx4330cy2886cxt0cyt0cxb8660cyb5773.jpg",
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h1024c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp",
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h768c1cx4330cy2886cxt0cyt0cxb8660cyb5773.jpg",
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h768c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp",
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h576c1cx4330cy2886cxt0cyt0cxb8660cyb5773.jpg",
+                "https://assets.afcdn.com/recipe/20200219/107902_w1024h576c1cx4330cy2886cxt0cyt0cxb8660cyb5773.webp"
+            ],
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2026-07-27T05:01:59+02:00",
+            "prepTime": "PT20M",
+            "cookTime": "PT20M",
+            "totalTime": "PT40M",
+            "recipeYield": "4 personnes",
+            "recipeIngredient": [
+                "6 saucisses fum\u00e9es (genre diots de Savoie) ou 4 grosses saucisses fum\u00e9es type Montb\u00e9liard",
+                "4 tomates (en conserve hors saison)",
+                "4 oignons",
+                "6 gousses d'ail",
+                "thym",
+                "laurier",
+                "poivre",
+                "sel",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 de curcuma (safran)",
+                "1 piment oiseau (facultatif)",
+                "huile d'olive"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Piquez les saucisses et mettez les dans l'eau bouillante pendant 10 mn, dans la m\u00eame marmite qui vous servira \u00e0 la pr\u00e9paration du plat afin de garder les saveurs. "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Videz la marmite. R\u00e9servez les saucisses. Faites-y chauffer de l'huile d'olive. "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Faites revenir les oignons \u00e9minc\u00e9s et l'ail \u00e9cras\u00e9 sans qu'ils soient trop color\u00e9s. "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Coupez les saucisses en troncons de 1,5 cm puis faites les revenir avec les oignons. Au bout de 5 mn, ajoutez les tomates coup\u00e9es en petits morceaux et les aromates (le piment en morceaux). "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "M\u00e9langez le tout puis laisser mijoter sur feu doux en \u00f4tant le couvercle de temps \u00e0 autre pour \u00e9liminer l'exc\u00e8s d'eau. "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Servez avec du riz thai"
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Recette Rougail saucisse : la meilleure recette rapide et facile : 4 personnes, 40 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 431 membres Marmiton.",
+            "keywords": "Rougail saucisse, rougail, saucisse, tomate, oignon, ail, thym, laurier, poivre, sel, curcuma, piment, huile d'olive, Tr\u00e8s facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 431,
+                "ratingValue": 4.7,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "617 calories",
+                "servingSize": "448.3 grams",
+                "carbohydrateContent": "15.3 g",
+                "fatContent": "43.1 g",
+                "fiberContent": "4.6 g",
+                "proteinContent": "39 g",
+                "saturatedFatContent": "16 g",
+                "sodiumContent": "5.8 g",
+                "sugarContent": "9.6 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/GlutenFreeDiet",
+                "https://schema.org/LowLactoseDiet"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,347 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/entree/",
+                        "name": "Entr\u00e9e"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/entree-chaude/",
+                        "name": "Entr\u00e9e chaude"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/soupe/",
+                        "name": "Soupe"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx",
+                        "name": "Velout\u00e9 froid de betteraves"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#breadcrumb"
+            },
+            "name": "Velout\u00e9 froid de betteraves : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2025-11-03T05:01:13+01:00",
+            "lastReviewed": "2025-11-03",
+            "description": "Recette Velout\u00e9 froid de betteraves : la meilleure recette rapide et facile : 4 personnes, 35 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 136 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20160404/43464_w1500h844c1cx1500cy1000.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-cooking-chef_382694.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-companion_382693.aspx",
+                "https://www.marmiton.org/recettes/recette_soupe-froide-betterave-et-concombre-pour-l-ete_225847.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-concombre_38799.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-aux-poireaux_25060.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-poireaux_27741.aspx",
+                "https://www.marmiton.org/recettes/recette_soupe-froide-de-concombre_49327.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-chaud-de-betteraves_168098.aspx",
+                "https://www.marmiton.org/recettes/recette_soupe-froide-au-concombre-simple_15451.aspx",
+                "https://www.marmiton.org/cuisine-facile/nos-idees-de-soupes-froides-originales-s3042773.html",
+                "https://www.marmiton.org/noel/nos-meilleures-recettes-d-entrees-froides-pour-votre-repas-de-noel-s4052354.html",
+                "https://www.marmiton.org/cuisine-eco-et-maline/ne-jetez-plus-les-feuilles-des-betteraves-voici-tout-ce-que-vous-pouvez-faire-avec-et-c-est-un-tresor-s4114154.html",
+                "https://www.marmiton.org/trucs-et-astuces/est-il-plus-simple-d-ecaler-les-oeufs-durs-quand-ils-sont-chauds-ou-froids-s4115150.html",
+                "https://www.marmiton.org/recettes/index/ingredient/betterave",
+                "https://www.marmiton.org/cuisine-facile/notre-idee-d-entree-froide-super-facile-et-de-saison-avec-du-melon-s4044306.html",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-cookeo_382692.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-thermomix_382696.aspx",
+                "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-monsieur-cuisine_382695.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20160404/43464_w1500h844c1cx1500cy1000.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20160404/43464_w1500h844c1cx1500cy1000.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#primaryimage",
+            "caption": "Velout\u00e9 froid de betteraves : la meilleure recette"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx",
+            "numberOfItems": 13,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-cooking-chef_382694.aspx",
+                    "name": "Velout\u00e9 froid de betteraves au Cooking Chef",
+                    "image": "https://assets.afcdn.com/recipe/20191102/101804_w6016h3384cx3008cy2008cxt0cyt0cxb6016cyb4016.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-companion_382693.aspx",
+                    "name": "Velout\u00e9 froid de betteraves au Companion",
+                    "image": "https://assets.afcdn.com/recipe/20191102/101803_w5616h3159cx2808cy1872cxt0cyt0cxb5616cyb3743.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_soupe-froide-betterave-et-concombre-pour-l-ete_225847.aspx",
+                    "name": "Soupe froide betterave et concombre pour l'\u00e9t\u00e9",
+                    "image": "https://assets.afcdn.com/recipe/20210722/121307_w2127h1196cx1063cy705cxt0cyt0cxb2127cyb1410.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_soupe-froide-de-concombre_49327.aspx",
+                    "name": "Soupe froide de concombre",
+                    "image": "https://assets.afcdn.com/recipe/20180801/81663_w3872h2178cx1936cy1296cxt0cyt0cxb3866cyb2588.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-chaud-de-betteraves_168098.aspx",
+                    "name": "Velout\u00e9 chaud de betteraves",
+                    "image": "https://assets.afcdn.com/recipe/20130522/59574_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/cuisine-facile/nos-idees-de-soupes-froides-originales-s3042773.html",
+                    "name": "Nos id\u00e9es de soupes froides originales",
+                    "image": "https://assets.afcdn.com/story/20230608/2220839_w1792h1008cx896cy599cxt0cyt0cxb1792cyb1197.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/noel/nos-meilleures-recettes-d-entrees-froides-pour-votre-repas-de-noel-s4052354.html",
+                    "name": "Nos meilleures recettes d\u2019entr\u00e9es froides pour votre repas de No\u00ebl",
+                    "image": "https://assets.afcdn.com/story/20221104/2197405_w2121h1193cx1061cy707cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/cuisine-eco-et-maline/ne-jetez-plus-les-feuilles-des-betteraves-voici-tout-ce-que-vous-pouvez-faire-avec-et-c-est-un-tresor-s4114154.html",
+                    "name": "Ne jetez plus les feuilles des betteraves, voici tout ce que vous pouvez faire avec (et c'est un tr\u00e9sor)",
+                    "image": "https://assets.afcdn.com/story/20250528/2304514_w4704h2646cx2352cy1568cxt0cyt0cxb4704cyb3136.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/trucs-et-astuces/est-il-plus-simple-d-ecaler-les-oeufs-durs-quand-ils-sont-chauds-ou-froids-s4115150.html",
+                    "name": "Est-il plus simple d'\u00e9caler les \u0153ufs durs quand ils sont chauds ou froids ?",
+                    "image": "https://assets.afcdn.com/story/20250620/2306018_w3456h1944cx1728cy1152cxt0cyt0cxb3455cyb2304.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/cuisine-facile/notre-idee-d-entree-froide-super-facile-et-de-saison-avec-du-melon-s4044306.html",
+                    "name": "Notre id\u00e9e d'entr\u00e9e froide super facile et de saison avec du melon !",
+                    "image": "https://assets.afcdn.com/story/20220623/2178839_w1200h675cx600cy900cxt0cyt0cxb1200cyb1800.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-cookeo_382692.aspx",
+                    "name": "Velout\u00e9 froid de betteraves au Cookeo",
+                    "image": "https://assets.afcdn.com/recipe/20191102/101802_w4352h2448cx2176cy1727cxt0cyt0cxb4352cyb3455.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-thermomix_382696.aspx",
+                    "name": "Velout\u00e9 froid de betteraves au Thermomix",
+                    "image": "https://assets.afcdn.com/recipe/20191102/101806_w2448h1377cx1224cy1632cxt0cyt0cxb2448cyb3264.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves-au-monsieur-cuisine_382695.aspx",
+                    "name": "Velout\u00e9 froid de betteraves au Monsieur Cuisine",
+                    "image": "https://assets.afcdn.com/recipe/20191102/101805_w5000h2813cx2500cy1666cxt0cyt0cxb5000cyb3333.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_veloute-froid-de-betteraves_17805.aspx"
+            },
+            "name": "Velout\u00e9 froid de betteraves : la meilleure recette",
+            "recipeCategory": "Entr\u00e9e",
+            "image": [
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h1024c1cx1500cy1000.jpg",
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h1024c1cx1500cy1000.webp",
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h768c1cx1500cy1000.jpg",
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h768c1cx1500cy1000.webp",
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h576c1cx1500cy1000.jpg",
+                "https://assets.afcdn.com/recipe/20160404/43464_w1024h576c1cx1500cy1000.webp"
+            ],
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2025-11-03T05:01:13+01:00",
+            "prepTime": "PT20M",
+            "cookTime": "PT15M",
+            "totalTime": "PT35M",
+            "recipeYield": "4 personnes",
+            "recipeIngredient": [
+                "2 betteraves",
+                "1 gousse d'ail",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 d'huile d'olive",
+                "2 yaourts bulgare (ou Fjord)",
+                "1 concombre",
+                "poivre",
+                "sel",
+                "concombre (un peu, pour d\u00e9corer)",
+                "persil plat (pour d\u00e9corer)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire cuire les betteraves (\u00e0 la cocotte minute,c'est plus rapide)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Quand elles sont froides, les mixer avec les yaourts, huile d'olive, concombre, ail, sel, poivre."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "R\u00e9partir sur les assiettes. D\u00e9corer de fins b\u00e2tonnets de concombres et de persil plat."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Attention aux yeux... La couleur surprend, mais le go\u00fbt est exquis!"
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Vivi"
+            },
+            "description": "Recette Velout\u00e9 froid de betteraves : la meilleure recette rapide et facile : 4 personnes, 35 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 136 membres Marmiton.",
+            "keywords": "Velout\u00e9 froid de betteraves, soupe, betterave, ail, huile d'olive, yaourt, concombre, poivre, sel, persil, Tr\u00e8s facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 136,
+                "ratingValue": 4.7,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "159 calories",
+                "servingSize": "420.3 grams",
+                "carbohydrateContent": "19.9 g",
+                "fatContent": "4.6 g",
+                "fiberContent": "5.7 g",
+                "proteinContent": "7 g",
+                "saturatedFatContent": "1.6 g",
+                "sodiumContent": "1.6 g",
+                "sugarContent": "15.2 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/VegetarianDiet",
+                "https://schema.org/GlutenFreeDiet"
+            ]
+        }
+    ]
+}

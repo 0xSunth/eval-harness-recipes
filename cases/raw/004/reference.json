@@ -1,0 +1,296 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx",
+                        "name": "Blanc-manger coco"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#breadcrumb"
+            },
+            "name": "Blanc-manger coco : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2023-12-05T22:07:42+01:00",
+            "lastReviewed": "2023-12-05",
+            "description": "Recette Blanc-manger coco : la meilleure recette rapide et facile : 8 personnes, 15 min de pr\u00e9paration. Not\u00e9e 4.3/5 par 34 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20170321/63202_w1500h844c1cx2527cy1685.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_blanc-manger-des-iles_231722.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-noix-de-coco_73097.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-aux-amandes_23300.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-a-la-noix-de-coco_14542.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-antillais_14361.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-aux-poires-et-aux-amandes_60138.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-au-pralin_26757.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-facile-de-ma-maman_30672.aspx",
+                "https://www.marmiton.org/recettes/recette_simplicime-blanc-manger-aux-amandes_73965.aspx",
+                "https://www.marmiton.org/focus-ingredient/est-ce-une-bonne-idee-de-consommer-du-lait-de-coco-tous-les-jours-s4084046.html",
+                "https://www.marmiton.org/bien-choisir-ses-aliments/combien-d-oeufs-peut-on-manger-par-semaine-s4063505.html",
+                "https://www.marmiton.org/shopping/la-noix-de-coco-comment-la-choisir-et-la-cuisiner-s4049246.html",
+                "https://www.marmiton.org/recettes/index/ingredient/gelatine",
+                "https://www.marmiton.org/focus-ingredient/peut-on-manger-de-l-avocat-tous-les-jours-s4075432.html",
+                "https://www.marmiton.org/focus-ingredient/oeuf-qu-est-ce-que-les-filaments-blancs-et-peut-on-les-manger-sans-risque-s4082143.html",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-coco_531867.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger-coco-bananes_15131.aspx",
+                "https://www.marmiton.org/recettes/recette_blanc-manger_23607.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20170321/63202_w1500h844c1cx2527cy1685.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20170321/63202_w1500h844c1cx2527cy1685.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#primaryimage",
+            "caption": "Blanc-manger coco : la meilleure recette"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx",
+            "numberOfItems": 10,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_blanc-manger-des-iles_231722.aspx",
+                    "name": "Blanc-manger des \u00eeles",
+                    "image": "https://assets.afcdn.com/recipe/20121124/2158_w384h216cx192cy256.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_blanc-manger-aux-amandes_23300.aspx",
+                    "name": "blanc-manger aux amandes",
+                    "image": "https://assets.afcdn.com/recipe/20150628/18415_w2448h1377cx1224cy1632.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_blanc-manger-au-pralin_26757.aspx",
+                    "name": "Blanc-Manger au pralin",
+                    "image": "https://assets.afcdn.com/recipe/20100120/10250_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_blanc-manger-facile-de-ma-maman_30672.aspx",
+                    "name": "Blanc-manger facile de ma Maman",
+                    "image": "https://assets.afcdn.com/recipe/20160630/13847_w2048h1152cx1024cy768.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/focus-ingredient/est-ce-une-bonne-idee-de-consommer-du-lait-de-coco-tous-les-jours-s4084046.html",
+                    "name": "Est-ce une bonne id\u00e9e de consommer du lait de coco tous les jours ?",
+                    "image": "https://assets.afcdn.com/story/20240425/2248079_w5760h3240cx2880cy1920cxt0cyt0cxb5760cyb3840.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/bien-choisir-ses-aliments/combien-d-oeufs-peut-on-manger-par-semaine-s4063505.html",
+                    "name": "Combien d\u2019\u0153ufs peut on manger par semaine\u00a0?",
+                    "image": "https://assets.afcdn.com/story/20230427/2218048_w1275h717cx638cy442cxt0cyt0cxb1275cyb883.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/shopping/la-noix-de-coco-comment-la-choisir-et-la-cuisiner-s4049246.html",
+                    "name": "La noix de coco, comment la choisir et la cuisiner ?",
+                    "image": "https://assets.afcdn.com/story/20220919/2190346_w2172h1222cx1086cy690cxt0cyt0cxb2172cyb1380.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/focus-ingredient/peut-on-manger-de-l-avocat-tous-les-jours-s4075432.html",
+                    "name": "Peut-on manger de l'avocat tous les jours ?",
+                    "image": "https://assets.afcdn.com/story/20231123/2235366_w1200h675cx600cy338cxt0cyt0cxb1200cyb675.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/focus-ingredient/oeuf-qu-est-ce-que-les-filaments-blancs-et-peut-on-les-manger-sans-risque-s4082143.html",
+                    "name": "\u0152uf : qu'est-ce que les filaments blancs, et peut-on les manger sans risque ?",
+                    "image": "https://assets.afcdn.com/story/20240327/2245591_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_531867.aspx",
+                    "name": "Blanc-manger coco",
+                    "image": "https://assets.afcdn.com/recipe/20211004/122386_w1982h1115cx1362cy842cxt0cyt0cxb1982cyb1513.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx"
+            },
+            "name": "Blanc-manger coco : la meilleure recette",
+            "recipeCategory": "Dessert",
+            "image": [
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h1024c1cx2527cy1685.jpg",
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h1024c1cx2527cy1685.webp",
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h768c1cx2527cy1685.jpg",
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h768c1cx2527cy1685.webp",
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h576c1cx2527cy1685.jpg",
+                "https://assets.afcdn.com/recipe/20170321/63202_w1024h576c1cx2527cy1685.webp"
+            ],
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2023-12-05T22:07:42+01:00",
+            "prepTime": "PT15M",
+            "cookTime": "PT0S",
+            "totalTime": "PT15M",
+            "recipeYield": "8 personnes",
+            "recipeIngredient": [
+                "400 ml de lait de coco",
+                "800 ml de lait concentr\u00e9 sucr\u00e9",
+                "9 feuilles de G\u00e9latine",
+                "1 pinc\u00e9e de vanille en poudre sucr\u00e9e"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire tremper les feuilles de g\u00e9latine dans de l'eau froide 5mn, puis les plonger dans une casserole avec 40 cl d'eau bouillante. M\u00e9langer jusqu'\u00e0 ce que la g\u00e9latine ait enti\u00e8rement fondu."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Dans un mixer, m\u00e9langer le lait concentr\u00e9, le lait de coco, la g\u00e9latine fondue et 40 cl d'eau froide."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Verser dans des ramequins et saupoudrer un peu de vanille dans chaque."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Placer au r\u00e9frig\u00e9rateur 24h minimum."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "lina_15113107"
+            },
+            "description": "Recette Blanc-manger coco : la meilleure recette rapide et facile : 8 personnes, 15 min de pr\u00e9paration. Not\u00e9e 4.3/5 par 34 membres Marmiton.",
+            "keywords": "Blanc-manger coco, lait de coco, lait concentr\u00e9 sucr\u00e9, G\u00e9latine, vanille, Tr\u00e8s facile, Bon march\u00e9, rapide",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 34,
+                "ratingValue": 4.3,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "435 calories",
+                "servingSize": "154.6 grams",
+                "carbohydrateContent": "60.5 g",
+                "fatContent": "17.1 g",
+                "fiberContent": "0.3 g",
+                "proteinContent": "10 g",
+                "saturatedFatContent": "13.4 g",
+                "sodiumContent": "0.3 g",
+                "sugarContent": "57.1 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/GlutenFreeDiet"
+            ]
+        }
+    ]
+}

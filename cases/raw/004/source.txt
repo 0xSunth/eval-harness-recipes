@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_blanc-manger-coco_15484.aspx
+captured_at: 2026-09-24
+page_modified: 2023-12-05
+recipe_name: Blanc-manger coco
+servings_displayed: 8

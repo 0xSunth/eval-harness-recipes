@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx
+captured_at: 2026-09-24
+page_modified: 2026-07-13
+recipe_name: Forêt Noire
+servings_displayed: 8

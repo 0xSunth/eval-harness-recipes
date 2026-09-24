@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx
+captured_at: 2026-09-24
+page_modified: 2026-07-27
+recipe_name: Tomates farcies facile
+servings_displayed: 4

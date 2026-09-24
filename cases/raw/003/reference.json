@@ -1,0 +1,369 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/dessert/",
+                        "name": "Dessert"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/flan/",
+                        "name": "Flan"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/clafoutis/",
+                        "name": "Clafoutis"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx",
+                        "name": "Clafoutis grand-m\u00e8re aux cerises"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#breadcrumb"
+            },
+            "name": "Clafoutis grand-m\u00e8re aux cerises : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2004-06-04T10:35:00+02:00",
+            "dateModified": "2026-07-13T05:02:10+02:00",
+            "lastReviewed": "2026-07-13",
+            "description": "Recette Clafoutis grand-m\u00e8re aux cerises : la meilleure recette rapide et facile : 8 personnes, 40 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 727 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20190529/93128_w1500h844c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-cooking-chef_383677.aspx",
+                "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-monsieur-cuisine_383678.aspx",
+                "https://www.marmiton.org/recettes/recette_pates-de-ma-grand-mere_20409.aspx",
+                "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises-express_17365.aspx",
+                "https://www.marmiton.org/recettes/recette_boulettes-de-la-grand-mere_533103.aspx",
+                "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises_30242.aspx",
+                "https://www.marmiton.org/recettes/recette_mon-clafoutis-aux-cerises_23043.aspx",
+                "https://www.marmiton.org/recettes/recette_boulettes-de-ma-grand-mere_87521.aspx",
+                "https://www.marmiton.org/recettes/recette_poulet-facon-grand-mere_35345.aspx",
+                "https://www.marmiton.org/cuisine-facile/c-est-la-recette-de-ma-mere-et-que-ma-grand-mere-lui-a-donnee-voici-comment-preparer-l-authentique-pissaladiere-s4117791.html",
+                "https://www.marmiton.org/none/ce-tresor-alsacien-se-transmet-de-grand-mere-en-grand-mere-avec-seulement-4-ingredients-s4124131.html",
+                "https://www.marmiton.org/de-tous-les-jours/voici-pourquoi-vous-devriez-garder-les-noyaux-de-vos-cerises-dans-votre-clafoutis-selon-philippe-etchebest-s4090126.html",
+                "https://www.marmiton.org/none/la-recette-du-clafoutis-aux-cerises-de-laurent-mariotte-s4064501.html",
+                "https://www.marmiton.org/gateaux/retrouvez-le-clafoutis-de-votre-grand-mere-grace-a-cette-recette-super-facile-et-pas-chere-s4085670.html",
+                "https://www.marmiton.org/recettes/oubliez-les-pommes-ou-les-cerises-ce-clafoutis-a-la-fraise-marmiton-fait-l-unanimite-depuis-des-annees-s4111557.html",
+                "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises-au-thermomix_382541.aspx",
+                "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-companion_383676.aspx",
+                "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-cookeo_382442.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20190529/93128_w1500h844c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20190529/93128_w1500h844c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#primaryimage",
+            "caption": "Clafoutis grand-m\u00e8re aux cerises : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#video",
+            "name": "Clafoutis de grand-m\u00e8re aux cerises",
+            "description": "Clafoutis de grand-m\u00e8re aux cerises",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20220817/v_759635_w854h480c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20220817/v_759635_HD.mp4",
+            "uploadDate": "2004-06-04T10:35:00+02:00",
+            "duration": "PT34S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx",
+            "numberOfItems": 15,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-cooking-chef_383677.aspx",
+                    "name": "Clafoutis Grand-M\u00e8re aux cerises au Cooking Chef",
+                    "image": "https://assets.afcdn.com/recipe/20191206/103767_w4912h2763cx2549cy4678cxt0cyt0cxb4912cyb7360.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-monsieur-cuisine_383678.aspx",
+                    "name": "Clafoutis Grand-M\u00e8re aux cerises au Monsieur Cuisine",
+                    "image": "https://assets.afcdn.com/recipe/20191206/103768_w3173h1785cx2081cy2068cxt0cyt0cxb3173cyb4758.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises-express_17365.aspx",
+                    "name": "Clafoutis aux cerises express",
+                    "image": "https://assets.afcdn.com/recipe/20180126/77154_w5616h3159cx2808cy1872cxt0cyt0cxb5616cyb3744.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_boulettes-de-la-grand-mere_533103.aspx",
+                    "name": "Boulettes de la grand m\u00e8re",
+                    "image": "https://assets.afcdn.com/recipe/20220126/128084_w5184h2916cx2592cy1944cxt0cyt0cxb5184cyb3888.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises_30242.aspx",
+                    "name": "Clafoutis aux cerises",
+                    "image": "https://assets.afcdn.com/recipe/20171019/73385_w3264h1836cx1632cy1224cxt0cyt0cxb3264cyb2448.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_mon-clafoutis-aux-cerises_23043.aspx",
+                    "name": "Mon Clafoutis aux cerises",
+                    "image": "https://assets.afcdn.com/recipe/20110521/66387_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/cuisine-facile/c-est-la-recette-de-ma-mere-et-que-ma-grand-mere-lui-a-donnee-voici-comment-preparer-l-authentique-pissaladiere-s4117791.html",
+                    "name": "\"C'est la recette de ma m\u00e8re et que ma grand-m\u00e8re lui a donn\u00e9e\" : voici comment pr\u00e9parer l'authentique pissaladi\u00e8re",
+                    "image": "https://assets.afcdn.com/story/20250908/2309702_w3408h1917.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/none/ce-tresor-alsacien-se-transmet-de-grand-mere-en-grand-mere-avec-seulement-4-ingredients-s4124131.html",
+                    "name": "Ce tr\u00e9sor alsacien se transmet de grand-m\u00e8re en grand-m\u00e8re avec seulement 4 ingr\u00e9dients",
+                    "image": "https://assets.afcdn.com/story/20260129/2317145_w5500h3094cx2750cy1836cxt0cyt0cxb5500cyb3672.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/de-tous-les-jours/voici-pourquoi-vous-devriez-garder-les-noyaux-de-vos-cerises-dans-votre-clafoutis-selon-philippe-etchebest-s4090126.html",
+                    "name": "Voici pourquoi vous devriez garder les noyaux de vos cerises dans votre clafoutis selon Philippe Etchebest",
+                    "image": "https://assets.afcdn.com/story/20240718/2258741_w5184h2916cx2592cy1728cxt0cyt0cxb5184cyb3456.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/none/la-recette-du-clafoutis-aux-cerises-de-laurent-mariotte-s4064501.html",
+                    "name": "La recette du clafoutis aux cerises de Laurent Mariotte",
+                    "image": "https://assets.afcdn.com/story/20230519/2219538_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/gateaux/retrouvez-le-clafoutis-de-votre-grand-mere-grace-a-cette-recette-super-facile-et-pas-chere-s4085670.html",
+                    "name": "Retrouvez le clafoutis de votre grand-m\u00e8re gr\u00e2ce \u00e0 cette recette super facile et pas ch\u00e8re",
+                    "image": "https://assets.afcdn.com/story/20240522/2250290_w5472h3078cx2736cy1824cxt0cyt0cxb5472cyb3648.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/recettes/oubliez-les-pommes-ou-les-cerises-ce-clafoutis-a-la-fraise-marmiton-fait-l-unanimite-depuis-des-annees-s4111557.html",
+                    "name": "Oubliez les pommes ou les cerises, ce clafoutis \u00e0 la fraise Marmiton fait l'unanimit\u00e9 depuis des ann\u00e9es !",
+                    "image": "https://assets.afcdn.com/story/20250423/2299711_w6000h3375cx3000cy2000cxt0cyt0cxb6000cyb4000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-aux-cerises-au-thermomix_382541.aspx",
+                    "name": "Clafoutis Grand-M\u00e8re aux cerises au Thermomix",
+                    "image": "https://assets.afcdn.com/recipe/20191023/101051_w2592h1458cx1296cy1914cxt0cyt0cxb2592cyb3829.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-companion_383676.aspx",
+                    "name": "Clafoutis Grand-M\u00e8re aux cerises au Companion",
+                    "image": "https://assets.afcdn.com/recipe/20191206/103766_w5472h3078cx2625cy1591cxt0cyt0cxb5472cyb3648.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "url": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises-au-cookeo_382442.aspx",
+                    "name": "Clafoutis Grand-M\u00e8re aux cerises au Cookeo",
+                    "image": "https://assets.afcdn.com/recipe/20191011/100464_w5472h3078cx2736cy1824cxt0cyt0cxb5472cyb3648.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx"
+            },
+            "name": "Clafoutis grand-m\u00e8re aux cerises : la meilleure recette",
+            "recipeCategory": "Dessert",
+            "image": [
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h1024c1cx2880cy1920cxt0cyt0cxb5760cyb3840.jpg",
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h1024c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp",
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h768c1cx2880cy1920cxt0cyt0cxb5760cyb3840.jpg",
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h768c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp",
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h576c1cx2880cy1920cxt0cyt0cxb5760cyb3840.jpg",
+                "https://assets.afcdn.com/recipe/20190529/93128_w1024h576c1cx2880cy1920cxt0cyt0cxb5760cyb3840.webp"
+            ],
+            "datePublished": "2004-06-04T10:35:00+02:00",
+            "dateModified": "2026-07-13T05:02:10+02:00",
+            "prepTime": "PT10M",
+            "cookTime": "PT30M",
+            "totalTime": "PT40M",
+            "recipeYield": "8 personnes",
+            "recipeIngredient": [
+                "600 g de cerises fra\u00eeches ou surgel\u00e9es",
+                "40 g de beurre semi-sel + 20 g pour le moule",
+                "4 oeufs",
+                "20 cl de lait",
+                "100 g de farine",
+                "60 g de sucre en poudre",
+                "1 sachet de sucre vanill\u00e9",
+                "1 pinc\u00e9e de sel",
+                "sucre glace"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Pr\u00e9chauffez le four \u00e0 210\u00b0C (thermostat 7).\nLavez rapidement les cerises sous un filet d'eau fra\u00eeche, \u00e9queutez-les et \u00e9gouttez-les. Personnellement j'enl\u00e8ve les noyaux, mais la recette traditionnelle veut qu'on les laisse, donc c'est \u00e0 vous de voir si vous les laissez ou pas...\n\nFaites fondre les 40 g de beurre dans une petite casserole \u00e0 fond \u00e9pais. M\u00e9langez dans un grand bol la farine, le sucre, le sel et le sucre vanill\u00e9. Incorporez les oeufs peu \u00e0 peu puis le lait petit \u00e0 petit en continuant de m\u00e9langer. Ajoutez le beurre fondu."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Beurrez grassement le plat, rangez les cerises puis versez la p\u00e2te \u00e0 clafoutis. \nMettez au four pendant 10 mn \u00e0 210\u00b0C puis baissez \u00e0 180\u00b0C et cuisez encore 20 mn."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Servez le clafoutis froid ou ti\u00e8de, saupoudr\u00e9 de sucre glace."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Recette Clafoutis grand-m\u00e8re aux cerises : la meilleure recette rapide et facile : 8 personnes, 40 min de pr\u00e9paration. Not\u00e9e 4.7/5 par 727 membres Marmiton.",
+            "keywords": "Clafoutis grand-m\u00e8re aux cerises, clafoutis, cerises, beurre, oeuf, lait, farine, sucre en poudre, sucre vanill\u00e9, sel, sucre glace, Tr\u00e8s facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 727,
+                "ratingValue": 4.7,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "230 calories",
+                "servingSize": "160.3 grams",
+                "carbohydrateContent": "31.1 g",
+                "fatContent": "7.7 g",
+                "fiberContent": "1.8 g",
+                "proteinContent": "8 g",
+                "saturatedFatContent": "3.9 g",
+                "sodiumContent": "0.2 g",
+                "sugarContent": "21.6 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/VegetarianDiet"
+            ]
+        }
+    ]
+}

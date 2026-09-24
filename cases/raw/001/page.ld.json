@@ -1,0 +1,346 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/plat-principal/",
+                        "name": "Plat principal"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/plat-unique/",
+                        "name": "Plat unique"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/legumes-farcis/",
+                        "name": "L\u00e9gumes farcis"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx",
+                        "name": "Tomates farcies facile"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#breadcrumb"
+            },
+            "name": "Tomates farcies facile : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2007-11-21T10:13:00+01:00",
+            "dateModified": "2026-07-27T05:01:59+02:00",
+            "lastReviewed": "2026-07-27",
+            "description": "Recette Tomates farcies facile : la meilleure recette rapide et facile : 4 personnes, 80 min de pr\u00e9paration. Not\u00e9e 4.6/5 par 215 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20171012/73069_w1500h844c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-brandade_16827.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-et-courgettes-farcies_82090.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-express-farcies-a-la-creme-de-thon_28584.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-cancoillotte_168600.aspx",
+                "https://www.marmiton.org/recettes/recette_courgettes-farcies-aux-petits-legumes_528356.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-courgette-et-ricotta_83231.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-thon_170324.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-l-avocat-et-thon_224775.aspx",
+                "https://www.marmiton.org/recettes/recette_aubergines-farcies-aux-tomates_56104.aspx",
+                "https://www.marmiton.org/recettes/index/ingredient/chair-a-saucisse",
+                "https://www.marmiton.org/recettes/comment-faire-des-tomates-farcies-sans-viande-s4065343.html",
+                "https://www.marmiton.org/chefs/philippe-etchebest-devoile-sa-delicieuse-recette-de-tomates-farcies-pour-nous-regaler-tout-l-ete-s4066650.html",
+                "https://www.marmiton.org/chefs/tomates-farcies-l-ingredient-qu-ajoute-toujours-cyril-lignac-pour-une-farce-bien-tendre-et-jamais-seche-s4116690.html",
+                "https://www.marmiton.org/recettes/index/ingredient/thym",
+                "https://www.marmiton.org/recettes/laurent-mariotte-partage-sa-recette-de-tomates-farcies-aux-sardines-pour-profiter-encore-un-peu-de-l-ete-s4094821.html",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-au-mais_61558.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-l-espagnole_21997.aspx",
+                "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-dinde_32150.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20171012/73069_w1500h844c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20171012/73069_w1500h844c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#primaryimage",
+            "caption": "Tomates farcies facile : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#video",
+            "name": "Tomates farcies faciles",
+            "description": "Tomates farcies faciles",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20180618/v539976_63622-tomates-farcies-facile-1080-1080-fr-pad-mp4_w854h854c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20180618/v539976_63622-tomates-farcies-facile-1080-1080-fr-pad-mp4_HD.mp4",
+            "uploadDate": "2007-11-21T10:13:00+01:00",
+            "duration": "PT1M3S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx",
+            "numberOfItems": 10,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-brandade_16827.aspx",
+                    "name": "Tomates farcies \u00e0 la brandade",
+                    "image": "https://assets.afcdn.com/recipe/20150118/40948_w4013h2257cx2006cy1596.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_tomates-et-courgettes-farcies_82090.aspx",
+                    "name": "Tomates et courgettes farcies",
+                    "image": "https://assets.afcdn.com/recipe/20200501/110277_w2000h1125cx1000cy1776cxt0cyt0cxb2000cyb3552.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_tomates-express-farcies-a-la-creme-de-thon_28584.aspx",
+                    "name": "Tomates Express Farcies \u00e0 la Cr\u00e8me de Thon",
+                    "image": "https://assets.afcdn.com/recipe/20100120/46310_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_courgettes-farcies-aux-petits-legumes_528356.aspx",
+                    "name": "Courgettes farcies aux tomates et poivrons",
+                    "image": "https://assets.afcdn.com/recipe/20200824/113273_w3648h2052cx1778cy2263cxt0cyt0cxb3648cyb5472.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-courgette-et-ricotta_83231.aspx",
+                    "name": "Tomates farcies \u00e0 la courgette et ricotta",
+                    "image": "https://assets.afcdn.com/recipe/20100120/45944_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/comment-faire-des-tomates-farcies-sans-viande-s4065343.html",
+                    "name": "3 conseils pour faire des tomates farcies ultra-gourmandes et sans viande pour faire des \u00e9conomies",
+                    "image": "https://assets.afcdn.com/story/20230608/2220873_w5184h2916cx2592cy1728cxt0cyt0cxb5184cyb3456.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/chefs/philippe-etchebest-devoile-sa-delicieuse-recette-de-tomates-farcies-pour-nous-regaler-tout-l-ete-s4066650.html",
+                    "name": "Philippe Etchebest d\u00e9voile sa d\u00e9licieuse recette de tomates farcies pour nous r\u00e9galer tout l'\u00e9t\u00e9 !",
+                    "image": "https://assets.afcdn.com/story/20230630/2222731_w6000h3375cx3000cy2000cxt0cyt0cxb6000cyb4000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/chefs/tomates-farcies-l-ingredient-qu-ajoute-toujours-cyril-lignac-pour-une-farce-bien-tendre-et-jamais-seche-bis-s4116690.html",
+                    "name": "Le duel contre la farce s\u00e8che des tomates farcies est fini : Cyril Lignac r\u00e9v\u00e8le son geste magique pour un plat parfait",
+                    "image": "https://assets.afcdn.com/story/20250806/2308293_w1200h675cx600cy338cxt0cyt0cxb1200cyb675.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/recettes/laurent-mariotte-partage-sa-recette-de-tomates-farcies-aux-sardines-pour-profiter-encore-un-peu-de-l-ete-s4094821.html",
+                    "name": "Laurent Mariotte partage sa recette de tomates farcies aux sardines pour profiter encore un peu de l\u2019\u00e9t\u00e9",
+                    "image": "https://assets.afcdn.com/story/20240916/2267620_w6000h3375cx3000cy2000cxt0cyt0cxb6000cyb4000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/recettes/recette_tomates-farcies-a-la-dinde_32150.aspx",
+                    "name": "Tomates Farcies a la Dinde",
+                    "image": "https://assets.afcdn.com/recipe/20180302/77809_w5472h3078cxt0cyt0cxb5472cyb3648.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx"
+            },
+            "name": "Tomates farcies facile : la meilleure recette",
+            "recipeCategory": "Plat principal",
+            "image": [
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h1024c1cx1944cy1292cxt0cyt0cxb3888cyb2585.jpg",
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h1024c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp",
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h768c1cx1944cy1292cxt0cyt0cxb3888cyb2585.jpg",
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h768c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp",
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h576c1cx1944cy1292cxt0cyt0cxb3888cyb2585.jpg",
+                "https://assets.afcdn.com/recipe/20171012/73069_w1024h576c1cx1944cy1292cxt0cyt0cxb3888cyb2585.webp"
+            ],
+            "datePublished": "2007-11-21T10:13:00+01:00",
+            "dateModified": "2026-07-27T05:01:59+02:00",
+            "prepTime": "PT20M",
+            "cookTime": "PT1H",
+            "totalTime": "PT1H20M",
+            "recipeYield": "4 personnes",
+            "recipeIngredient": [
+                "500 g de chair \u00e0 saucisse",
+                "4 tomates (ou 8 petites)",
+                "3 oignons",
+                "2 gousses d'ail",
+                "thym",
+                "persil",
+                "beurre",
+                "poivre",
+                "sel"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Eplucher et hacher les oignons. Eplucher et hacher les gousses d'ail."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mettre la moiti\u00e9 des oignons dans la chair \u00e0 saucisse. Ajouter l'ail, le sel, le poivre et un peu de persil."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Couper le haut des tomates et les \u00e9vider. Poivrer et saler l'int\u00e9rieur. Mettre la farce \u00e0 l'int\u00e9rieur et remettre les chapeaux."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mettre le reste des oignons dans un plat avec la chair des tomates."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mettre les tomates farcies dans le plat. Parsemez d'un peu de thym et mette une noisette de beurre sur chaque tomates. Faire cuire au four chaud \u00e0 180\u00b0C (thermostat 6) pendant 1 heure environ."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Servir avec du riz."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Recette Tomates farcies facile : la meilleure recette rapide et facile : 4 personnes, 80 min de pr\u00e9paration. Not\u00e9e 4.6/5 par 215 membres Marmiton.",
+            "keywords": "Tomates farcies facile, l\u00e9gumes farcis, chair \u00e0 saucisse, tomate, oignon, ail, thym, persil, beurre, poivre, sel, Tr\u00e8s facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 215,
+                "ratingValue": 4.6,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_tomates-farcies-facile_63622.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "557 calories",
+                "servingSize": "321.5 grams",
+                "carbohydrateContent": "9.3 g",
+                "fatContent": "47.5 g",
+                "fiberContent": "3.2 g",
+                "proteinContent": "21 g",
+                "saturatedFatContent": "7.1 g",
+                "sodiumContent": "3.1 g",
+                "sugarContent": "6 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/GlutenFreeDiet"
+            ]
+        }
+    ]
+}

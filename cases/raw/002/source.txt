@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_rougail-saucisse_22851.aspx
+captured_at: 2026-09-24
+page_modified: 2026-07-27
+recipe_name: Rougail saucisse
+servings_displayed: 4

@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_clafoutis-grand-mere-aux-cerises_29896.aspx
+captured_at: 2026-09-24
+page_modified: 2026-07-13
+recipe_name: Clafoutis grand-mère aux cerises
+servings_displayed: 8

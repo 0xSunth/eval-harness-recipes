@@ -1,0 +1,344 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/aperitif-ou-buffet/",
+                        "name": "Ap\u00e9ritif ou buffet"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/cocktail-aperitif/",
+                        "name": "Cocktail ap\u00e9ritif"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx",
+                        "name": "Sex on the beach"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx#breadcrumb"
+            },
+            "name": "Sex on the beach : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2019-02-22T12:14:42+01:00",
+            "dateModified": "2024-11-12T15:54:39+01:00",
+            "lastReviewed": "2024-11-12",
+            "description": "Avec ses saveurs fruit\u00e9es et tropicales, le Sex on the Beach est un cocktail iconique \u00e0 base de vodka, de jus de cranberry et de p\u00eache. Ce cocktail synonyme d'exotisme est tr\u00e8s facile \u00e0 r\u00e9aliser. Il ravira sans aucun doute les amateurs de boissons douces et sucr\u00e9es. ",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx"
+                ]
+            },
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_le-c-blue-beach_347239.aspx",
+                "https://www.marmiton.org/recettes/recette_the-tarte-aux-fraises_22726.aspx",
+                "https://www.marmiton.org/recettes/recette_the-brookies_327349.aspx",
+                "https://www.marmiton.org/recettes/recette_cookies-au-the-vert-matcha-et-chocolat-blanc_90906.aspx",
+                "https://www.marmiton.org/recettes/recette_gateau-au-thes-bruns_18134.aspx",
+                "https://www.marmiton.org/recettes/recette_the-glace-a-la-peche_325678.aspx",
+                "https://www.marmiton.org/recettes/recette_cake-au-the-vert-matcha-framboises-allege_326544.aspx",
+                "https://www.marmiton.org/recettes/recette_pasteque-en-salade-et-melon-au-the-vert_29735.aspx",
+                "https://www.marmiton.org/recettes/recette_cake-au-the-vert_13646.aspx",
+                "https://www.marmiton.org/shopping/apprenez-a-faire-votre-the-maison-s4000740.html",
+                "https://www.marmiton.org/boissons-chaudes/the-perime-est-ce-que-je-peux-le-consommer-meme-apres-plusieurs-mois-s4085333.html",
+                "https://www.marmiton.org/mieux-cuisiner/pourquoi-mettre-du-miel-dans-votre-the-n-est-pas-une-bonne-idee-s4074081.html",
+                "https://www.marmiton.org/none/the-matcha-tout-savoir-pour-l-utiliser-en-cuisine-s4021604.html",
+                "https://www.marmiton.org/focus-ingredient/peut-on-consommer-du-the-perime-depuis-des-mois-ou-des-annees-sans-risque-s4108972.html",
+                "https://www.marmiton.org/focus-ingredient/rappel-de-the-bio-vendu-chez-carrefour-du-fait-d-une-contamination-aux-pesticides-il-s-agit-de-the-noir-darjeeling-s4117626.html",
+                "https://www.marmiton.org/recettes/recette_the_80599.aspx",
+                "https://www.marmiton.org/recettes/recette_the-glace_37303.aspx",
+                "https://www.marmiton.org/recettes/recette_malibu-beach_392328.aspx"
+            ]
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx",
+            "numberOfItems": 17,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_le-c-blue-beach_347239.aspx",
+                    "name": "Le C blue beach",
+                    "image": "https://assets.afcdn.com/recipe/20170226/32276_w1489h838cx744cy1500.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_the-tarte-aux-fraises_22726.aspx",
+                    "name": "'The' tarte aux fraises",
+                    "image": "https://assets.afcdn.com/recipe/20190529/93119_w3856h2169cx1928cy2951cxt0cyt0cxb3856cyb5903.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_the-brookies_327349.aspx",
+                    "name": "The brookies",
+                    "image": "https://assets.afcdn.com/recipe/20230619/143544_w6144h3456cx3072cy1728cxt0cyt0cxb6144cyb3456.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_cookies-au-the-vert-matcha-et-chocolat-blanc_90906.aspx",
+                    "name": "Cookies au th\u00e9 vert matcha et chocolat blanc",
+                    "image": "https://assets.afcdn.com/recipe/20200819/113176_w3365h1893cx1682cy2524cxt0cyt0cxb3365cyb5048.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_gateau-au-thes-bruns_18134.aspx",
+                    "name": "G\u00e2teau au th\u00e9s bruns",
+                    "image": "https://assets.afcdn.com/recipe/20190527/93033_w3024h1701cx1512cy1789cxt0cyt0cxb3024cyb3578.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_the-glace-a-la-peche_325678.aspx",
+                    "name": "Th\u00e9 glac\u00e9 \u00e0 la p\u00eache",
+                    "image": "https://assets.afcdn.com/recipe/20160629/40001_w6000h3375cx3000cy3000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/recettes/recette_cake-au-the-vert-matcha-framboises-allege_326544.aspx",
+                    "name": "Cake l\u00e9ger au th\u00e9 matcha et framboises ",
+                    "image": "https://assets.afcdn.com/recipe/20140810/42520_w3264h1836cx1632cy769.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/recettes/recette_pasteque-en-salade-et-melon-au-the-vert_29735.aspx",
+                    "name": "Past\u00e8que en salade et melon au th\u00e9 vert",
+                    "image": "https://assets.afcdn.com/recipe/20150819/17608_w2250h1266cx1125cy1500.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/recettes/recette_cake-au-the-vert_13646.aspx",
+                    "name": "Cake au th\u00e9 vert",
+                    "image": "https://assets.afcdn.com/recipe/20120823/19338_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/shopping/apprenez-a-faire-votre-the-maison-s4000740.html",
+                    "name": "Comment bien choisir et faire son th\u00e9 maison ?",
+                    "image": "https://assets.afcdn.com/story/20190502/2003302_w1400h788cx680cy462cxt272cyt44cxb1136cyb876.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/boissons-chaudes/the-perime-est-ce-que-je-peux-le-consommer-meme-apres-plusieurs-mois-s4085333.html",
+                    "name": "Th\u00e9 p\u00e9rim\u00e9 : est-ce que je peux le consommer m\u00eame apr\u00e8s plusieurs mois ?",
+                    "image": "https://assets.afcdn.com/story/20240517/2249817_w4256h2394cx2128cy1416cxt0cyt0cxb4256cyb2832.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/mieux-cuisiner/pourquoi-mettre-du-miel-dans-votre-the-n-est-pas-une-bonne-idee-s4074081.html",
+                    "name": "Pourquoi mettre du miel dans votre th\u00e9 ou infusion n\u2019est pas une bonne id\u00e9e",
+                    "image": "https://assets.afcdn.com/story/20231102/2233334_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/none/the-matcha-tout-savoir-pour-l-utiliser-en-cuisine-s4021604.html",
+                    "name": "Th\u00e9 matcha : tout savoir pour l\u2019utiliser en cuisine",
+                    "image": "https://assets.afcdn.com/story/20210122/2105351_w2121h1193cx1061cy707cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://www.marmiton.org/focus-ingredient/peut-on-consommer-du-the-perime-depuis-des-mois-ou-des-annees-sans-risque-s4108972.html",
+                    "name": "Peut-on consommer du th\u00e9 p\u00e9rim\u00e9 depuis des mois ou des ann\u00e9es sans risque ?",
+                    "image": "https://assets.afcdn.com/story/20250318/2294551_w6016h3384cx3008cy2008cxt0cyt0cxb6016cyb4016.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "url": "https://www.marmiton.org/focus-ingredient/rappel-de-the-bio-vendu-chez-carrefour-du-fait-d-une-contamination-aux-pesticides-il-s-agit-de-the-noir-darjeeling-s4117626.html",
+                    "name": "Rappel de th\u00e9 bio vendu chez Carrefour du fait d\u2019une contamination aux pesticides, il s\u2019agit de th\u00e9 noir Darjeeling",
+                    "image": "https://assets.afcdn.com/story/20250903/2309486_w1200h675cx570cy351cxt0cyt0cxb1200cyb675.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 16,
+                    "url": "https://www.marmiton.org/recettes/recette_the_80599.aspx",
+                    "name": "Th\u00e9 ",
+                    "image": "https://assets.afcdn.com/recipe/20160629/7905_w2592h1458cx1296cy1740.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 17,
+                    "url": "https://www.marmiton.org/recettes/recette_the-glace_37303.aspx",
+                    "name": "Th\u00e9 glac\u00e9",
+                    "image": "https://assets.afcdn.com/recipe/20131121/22712_w2646h1488cx1323cy1984.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx"
+            },
+            "name": "Sex on the beach : la meilleure recette",
+            "recipeCategory": "Dessert",
+            "image": [
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h1024c1cx2841cy2066cxt0cyt0cxb5608cyb4250.jpg",
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h1024c1cx2841cy2066cxt0cyt0cxb5608cyb4250.webp",
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h768c1cx2841cy2066cxt0cyt0cxb5608cyb4250.jpg",
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h768c1cx2841cy2066cxt0cyt0cxb5608cyb4250.webp",
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h576c1cx2841cy2066cxt0cyt0cxb5608cyb4250.jpg",
+                "https://assets.afcdn.com/recipe/20190222/88144_w1024h576c1cx2841cy2066cxt0cyt0cxb5608cyb4250.webp"
+            ],
+            "datePublished": "2019-02-22T12:14:42+01:00",
+            "dateModified": "2024-11-12T15:54:39+01:00",
+            "prepTime": "PT5M",
+            "cookTime": "PT0S",
+            "totalTime": "PT5M",
+            "recipeYield": "1 verre",
+            "recipeIngredient": [
+                "3 cl de vodka",
+                "4 cl de jus d'ananas",
+                "4 cl de jus de cranberries",
+                "2 cl de cr\u00e8me de m\u00fbre",
+                "2 cl de sirop de melon"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Dans un shaker rempli de gla\u00e7ons, verser tous les alcools puis compl\u00e9ter avec les jus de fruits."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Shaker pendant 2-3 minutes, jusqu'\u00e0 ce que les gla\u00e7ons disparaissent."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Servir dans un grand verre \u00e0 cocktail, type \"verre tulipe\"."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Marmiton_Recettes"
+            },
+            "description": "Avec ses saveurs fruit\u00e9es et tropicales, le Sex on the Beach est un cocktail iconique \u00e0 base de vodka, de jus de cranberry et de p\u00eache. Ce cocktail synonyme d'exotisme est tr\u00e8s facile \u00e0 r\u00e9aliser. Il ravira sans aucun doute les amateurs de boissons douces et sucr\u00e9es. ",
+            "keywords": "Sex on the beach, cocktail ap\u00e9ritif, vodka, jus d'ananas, jus de cranberries, cr\u00e8me de m\u00fbre, sirop, Tr\u00e8s facile, Bon march\u00e9, rapide",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 2,
+                "ratingValue": 4.5,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "237 calories",
+                "servingSize": "158 grams",
+                "carbohydrateContent": "32.3 g",
+                "fatContent": "0.1 g",
+                "fiberContent": "0.1 g",
+                "proteinContent": "1 g",
+                "saturatedFatContent": "0 g",
+                "sodiumContent": "0 g",
+                "sugarContent": "31.1 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/VegetarianDiet",
+                "https://schema.org/VeganDiet",
+                "https://schema.org/GlutenFreeDiet",
+                "https://schema.org/LowLactoseDiet"
+            ]
+        }
+    ]
+}

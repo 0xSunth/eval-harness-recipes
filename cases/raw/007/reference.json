@@ -1,0 +1,376 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/entree/",
+                        "name": "Entr\u00e9e"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/entree-froide/",
+                        "name": "Entr\u00e9e froide"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/terrine-pate/",
+                        "name": "Terrine, p\u00e2t\u00e9"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx",
+                        "name": "P\u00e2t\u00e9 en croute"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#breadcrumb"
+            },
+            "name": "P\u00e2t\u00e9 en croute : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2015-03-06T01:42:00+01:00",
+            "dateModified": "2026-03-23T05:01:28+01:00",
+            "lastReviewed": "2026-03-23",
+            "description": "Recette P\u00e2t\u00e9 en croute : la meilleure recette rapide et facile : 8 Personnes, 135 min de pr\u00e9paration. Not\u00e9e 4.8/5 par 10 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20211215/125913_w1500h844c1cx996cy800cxt0cyt0cxb2121cyb1414.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_pate-en-croute-au-foie-gras_66888.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-lorrain-en-croute_18904.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-de-canard-en-croute_22597.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-en-croute-vegetarien_528291.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-en-croute-aux-olives_26270.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-de-lotte-en-croute_324203.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-de-poisson-en-croute_28416.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-en-croute-de-noel_232191.aspx",
+                "https://www.marmiton.org/recettes/recette_filet-mignon-en-croute_14407.aspx",
+                "https://www.marmiton.org/recettes/index/ingredient/chair-a-saucisse",
+                "https://www.marmiton.org/chefs/voici-le-champion-de-france-de-pate-croute-qui-participera-au-championnat-du-monde-s4120095.html",
+                "https://www.marmiton.org/recettes/connaissez-vous-la-croute-cette-specialite-suisse-cousine-de-la-raclette-s4118925.html",
+                "https://www.marmiton.org/adresses/voici-ou-deguster-les-meilleurs-pates-en-croute-du-monde-en-france-et-ce-n-est-pas-a-paris-s4121226.html",
+                "https://www.marmiton.org/noel/si-vous-cherchez-un-pate-croute-pour-noel-la-recette-de-cet-artisan-charcutier-a-ete-elue-vice-championne-du-monde-s4102239.html",
+                "https://www.marmiton.org/anti-gaspi/l-erreur-un-peu-bete-que-l-on-fait-tous-avec-la-croute-du-parmesan-s4131544.html",
+                "https://www.marmiton.org/recettes/recette_pate-en-croute_534937.aspx",
+                "https://www.marmiton.org/recettes/recette_la-croute_164715.aspx",
+                "https://www.marmiton.org/recettes/recette_pate-en-croute-a-ma-facon_36986.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20211215/125913_w1500h844c1cx996cy800cxt0cyt0cxb2121cyb1414.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20211215/125913_w1500h844c1cx996cy800cxt0cyt0cxb2121cyb1414.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#primaryimage",
+            "caption": "P\u00e2t\u00e9 en croute : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#video",
+            "name": "P\u00e2t\u00e9 en cro\u00fbte",
+            "description": "P\u00e2t\u00e9 en cro\u00fbte",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20220711/v_655165_w854h480c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20220711/v_655165_HD.mp4",
+            "uploadDate": "2015-03-06T01:42:00+01:00",
+            "duration": "PT58S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx",
+            "numberOfItems": 9,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_pate-en-croute-vegetarien_528291.aspx",
+                    "name": "P\u00e2t\u00e9 en cro\u00fbte v\u00e9g\u00e9tarien",
+                    "image": "https://assets.afcdn.com/recipe/20200820/113196_w694h390cx347cy262cxt0cyt0cxb694cyb524.png"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_pate-en-croute-aux-olives_26270.aspx",
+                    "name": "P\u00e2t\u00e9 en cro\u00fbte aux olives",
+                    "image": "https://assets.afcdn.com/recipe/20200420/109843_w1280h720cxt0cyt0cxb1280cyb958.jpeg"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_filet-mignon-en-croute_14407.aspx",
+                    "name": "Filet mignon en cro\u00fbte",
+                    "image": "https://assets.afcdn.com/recipe/20201001/114522_w314h177cx157cy157cxt0cyt0cxb314cyb314.jpeg"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/chefs/voici-le-champion-de-france-de-pate-croute-qui-participera-au-championnat-du-monde-s4120095.html",
+                    "name": "Voici le Champion de France de P\u00e2t\u00e9-Cro\u00fbte qui participera au Championnat du Monde",
+                    "image": "https://assets.afcdn.com/story/20251121/2313290_w7216h4059cx3608cy2360cxt0cyt0cxb7216cyb4720.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/connaissez-vous-la-croute-cette-specialite-suisse-cousine-de-la-raclette-s4118925.html",
+                    "name": "Connaissez-vous la cro\u00fbte, cette sp\u00e9cialit\u00e9 suisse cousine de la raclette ?",
+                    "image": "https://assets.afcdn.com/story/20251009/2311150_w6000h3375cx3000cy2000cxt0cyt0cxb6000cyb4000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/adresses/voici-ou-deguster-les-meilleurs-pates-en-croute-du-monde-en-france-et-ce-n-est-pas-a-paris-s4121226.html",
+                    "name": "Voici o\u00f9 d\u00e9guster les meilleurs p\u00e2t\u00e9s en cro\u00fbte du monde en France (et ce n'est pas \u00e0 Paris)",
+                    "image": "https://assets.afcdn.com/story/20251203/2314013_w1280h720cx640cy360cxt0cyt0cxb1280cyb720.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/noel/si-vous-cherchez-un-pate-croute-pour-noel-la-recette-de-cet-artisan-charcutier-a-ete-elue-vice-championne-du-monde-s4102239.html",
+                    "name": "Si vous cherchez un p\u00e2t\u00e9 cro\u00fbte pour No\u00ebl, la recette de cet artisan charcutier a \u00e9t\u00e9 \u00e9lue vice championne du monde !",
+                    "image": "https://assets.afcdn.com/story/20241216/2281697_w7216h4059cx3755cy2155cxt0cyt0cxb7216cyb4720.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/anti-gaspi/l-erreur-un-peu-bete-que-l-on-fait-tous-avec-la-croute-du-parmesan-s4131544.html",
+                    "name": "L'erreur (un peu b\u00eate) que l'on fait tous avec la cro\u00fbte du parmesan",
+                    "image": "https://assets.afcdn.com/story/20260506/2324489_w5760h3240cx2880cy1920cxt0cyt0cxb5760cyb3840.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/recettes/recette_pate-en-croute_534937.aspx",
+                    "name": "P\u00e2t\u00e9 en cro\u00fbte",
+                    "image": "https://assets.afcdn.com/recipe/20230103/139087_w3024h1701cx1512cy2016cxt0cyt0cxb3024cyb4032.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx"
+            },
+            "name": "P\u00e2t\u00e9 en croute : la meilleure recette",
+            "recipeCategory": "Entr\u00e9e",
+            "image": [
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h1024c1cx996cy800cxt0cyt0cxb2121cyb1414.jpg",
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h1024c1cx996cy800cxt0cyt0cxb2121cyb1414.webp",
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h768c1cx996cy800cxt0cyt0cxb2121cyb1414.jpg",
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h768c1cx996cy800cxt0cyt0cxb2121cyb1414.webp",
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h576c1cx996cy800cxt0cyt0cxb2121cyb1414.jpg",
+                "https://assets.afcdn.com/recipe/20211215/125913_w1024h576c1cx996cy800cxt0cyt0cxb2121cyb1414.webp"
+            ],
+            "datePublished": "2015-03-06T01:42:00+01:00",
+            "dateModified": "2026-03-23T05:01:28+01:00",
+            "prepTime": "PT45M",
+            "cookTime": "PT1H30M",
+            "totalTime": "PT2H15M",
+            "recipeYield": "8 Personnes",
+            "recipeIngredient": [
+                "500 g de farine",
+                "250 g de beurre",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 de sel",
+                "500 g de veau (ou de poulet ou de canard )",
+                "300 g de porc",
+                "250 g de chair \u00e0 saucisse",
+                "1 oeuf",
+                "3 cuill\u00e8res \u00e0 soupe de sel fin",
+                "1 pinc\u00e9e de poivre",
+                "1 pinc\u00e9e de muscade",
+                "2 cuill\u00e8res \u00e0 soupe d'armagnac",
+                "1 sachet de gel\u00e9e",
+                "1 jaune d'oeuf pour dorer"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "A pr\u00e9parer la veille !"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire la p\u00e2te : mettre farine et beurre en morceaux dans un saladier, sabler. Ajouter une pinc\u00e9e de sel, l'eau pour obtenir une boule de p\u00e2te, \u00e0 laisser reposer une demi-heure"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pr\u00e9chauffer le four \u00e0 240\u00b0C."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pendant ce temps, pr\u00e9parer la farce : hacher les viandes, les m\u00e9langer \u00e0 la chair \u00e0 saucisse. Ajouter l'oeuf, l'armagnac, la muscade, le sel et le poivre."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Bien m\u00e9langer."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Etaler la p\u00e2te sur un papier sulfuris\u00e9 en lui donnant une forme ovale. D\u00e9poser la farce sur une moiti\u00e9 dans la longueur. Replier la p\u00e2te pour former un chausson."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Bien souder les bords en les humidifiant."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire un petit trou sur le dessus et y glisser une petite chemin\u00e9e faite en papier d'alu. "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Dorer \u00e0 l'oeuf"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Glisser le p\u00e2t\u00e9 avec le papier sulfuris\u00e9 sur une plaque du four"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire cuire 45 min \u00e0 240\u00b0C  puis 45 min \u00e0 220\u00b0C."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Laisser refroidir compl\u00e8tement"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pr\u00e9parer la gel\u00e9e selon les indications du paquet et une fois froide, la verser par le trou de la chemin\u00e9e."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "A laisser au r\u00e9frig\u00e9rateur une nuit."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Bonne d\u00e9gustation !"
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "josiane_396"
+            },
+            "description": "Recette P\u00e2t\u00e9 en croute : la meilleure recette rapide et facile : 8 Personnes, 135 min de pr\u00e9paration. Not\u00e9e 4.8/5 par 10 membres Marmiton.",
+            "keywords": "P\u00e2t\u00e9 en croute, terrine, p\u00e2t\u00e9, farine, beurre, sel, veau, porc, chair \u00e0 saucisse, oeuf, poivre, muscade, armagnac, gel\u00e9e, jaune d'oeuf, Facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 10,
+                "ratingValue": 4.8,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_pate-en-croute_334241.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "695 calories",
+                "servingSize": "249.5 grams",
+                "carbohydrateContent": "43.7 g",
+                "fatContent": "40.2 g",
+                "fiberContent": "2.5 g",
+                "proteinContent": "36 g",
+                "saturatedFatContent": "18.9 g",
+                "sodiumContent": "8.1 g",
+                "sugarContent": "1.2 g"
+            }
+        }
+    ]
+}

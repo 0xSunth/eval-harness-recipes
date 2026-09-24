@@ -1,0 +1,386 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/dessert/",
+                        "name": "Dessert"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/gateau/",
+                        "name": "G\u00e2teau"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/gateau-au-chocolat/",
+                        "name": "G\u00e2teau au chocolat"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx",
+                        "name": "For\u00eat Noire"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#breadcrumb"
+            },
+            "name": "For\u00eat Noire : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2026-07-13T05:02:10+02:00",
+            "lastReviewed": "2026-07-13",
+            "description": "Recette For\u00eat Noire : la meilleure recette rapide et facile : 8 personnes, 75 min de pr\u00e9paration. Not\u00e9e 4/5 par 11 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20230620/143594_w1500h844c1cx960cy540cxt0cyt0cxb1920cyb1080.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_foret-noire-en-verrine_166774.aspx",
+                "https://www.marmiton.org/recettes/recette_gateau-foret-noire_64460.aspx",
+                "https://www.marmiton.org/recettes/recette_gateau-foret-noire_22053.aspx",
+                "https://www.marmiton.org/recettes/recette_buche-facon-foret-noire_253826.aspx",
+                "https://www.marmiton.org/recettes/recette_vosgienne-ou-foret-noire-aux-framboises_44230.aspx",
+                "https://www.marmiton.org/recettes/recette_tiramisu-foret-noire_223583.aspx",
+                "https://www.marmiton.org/recettes/recette_buche-foret-noire_65606.aspx",
+                "https://www.marmiton.org/recettes/recette_tiramisu-facon-foret-noire_66551.aspx",
+                "https://www.marmiton.org/recettes/recette_quiche-jambon-foret-noire_82259.aspx",
+                "https://www.marmiton.org/bien-choisir-ses-aliments/des-olives-vertes-teintes-en-noir-voici-comment-reconnaitre-les-olives-noires-qui-ne-sont-pas-naturelles-s4074152.html",
+                "https://www.marmiton.org/astuces/la-cueillette-aux-champignons-n-aura-plus-aucun-secret-pour-vous-grace-aux-conseils-de-cet-expert-en-foret-s4118997.html",
+                "https://www.marmiton.org/recettes/index/ingredient/creme-fraiche",
+                "https://www.marmiton.org/recettes/index/ingredient/chocolat",
+                "https://www.marmiton.org/anti-gaspi/le-bout-noir-des-bananes-est-il-comestible-ou-non-s4070642.html",
+                "https://www.marmiton.org/adresses/ce-marche-medieval-d-ile-de-france-peut-devenir-le-plus-beau-marche-de-france-sur-tf1-mais-il-lui-manque-encore-ca-s4131468.html",
+                "https://www.marmiton.org/recettes/recette_foret-noire-express_30603.aspx",
+                "https://www.marmiton.org/recettes/recette_foret-noire_335011.aspx",
+                "https://www.marmiton.org/recettes/recette_foret-noire_334516.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20230620/143594_w1500h844c1cx960cy540cxt0cyt0cxb1920cyb1080.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20230620/143594_w1500h844c1cx960cy540cxt0cyt0cxb1920cyb1080.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#primaryimage",
+            "caption": "For\u00eat Noire : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#video",
+            "name": "FORET NOIRE",
+            "description": "FORET NOIRE",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20221209/v_764646_w854h480c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20221209/v_764646_HD.mp4",
+            "uploadDate": "2006-10-23T11:43:00+02:00"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx",
+            "numberOfItems": 14,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_foret-noire-en-verrine_166774.aspx",
+                    "name": "For\u00eat-noire en verrine",
+                    "image": "https://assets.afcdn.com/recipe/20140528/43265_w2592h1458cx1296cy729.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_gateau-foret-noire_64460.aspx",
+                    "name": "G\u00e2teau For\u00eat Noire",
+                    "image": "https://assets.afcdn.com/recipe/20121125/5853_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_buche-facon-foret-noire_253826.aspx",
+                    "name": "B\u00fbche fa\u00e7on for\u00eat noire",
+                    "image": "https://assets.afcdn.com/recipe/20130131/14274_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_vosgienne-ou-foret-noire-aux-framboises_44230.aspx",
+                    "name": "Vosgienne ou for\u00eat noire aux framboises",
+                    "image": "https://assets.afcdn.com/recipe/20201001/114537_w1046h588cx523cy597cxt0cyt0cxb1046cyb1194.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_tiramisu-foret-noire_223583.aspx",
+                    "name": "Tiramisu fa\u00e7on f\u00f4ret noire",
+                    "image": "https://assets.afcdn.com/recipe/20170113/47517_w2734h1538cx1367cy1094.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_buche-foret-noire_65606.aspx",
+                    "name": "B\u00fbche for\u00eat noire",
+                    "image": "https://assets.afcdn.com/recipe/20141030/19010_w2439h1372cx1219cy716.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/recettes/recette_tiramisu-facon-foret-noire_66551.aspx",
+                    "name": "Tiramisu fa\u00e7on for\u00eat noire",
+                    "image": "https://assets.afcdn.com/recipe/20170113/25445_w2734h1538cx1367cy2048.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/bien-choisir-ses-aliments/des-olives-vertes-teintes-en-noir-voici-comment-reconnaitre-les-olives-noires-qui-ne-sont-pas-naturelles-s4074152.html",
+                    "name": "Des olives vertes teintes en noir ? Voici comment reconna\u00eetre les olives noires qui ne sont pas naturelles",
+                    "image": "https://assets.afcdn.com/story/20231103/2233470_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/astuces/la-cueillette-aux-champignons-n-aura-plus-aucun-secret-pour-vous-grace-aux-conseils-de-cet-expert-en-foret-s4118997.html",
+                    "name": "La cueillette aux champignons n'aura plus aucun secret pour vous gr\u00e2ce aux conseils de cet expert en for\u00eat",
+                    "image": "https://assets.afcdn.com/story/20251013/2311236_w1200h675cx600cy338cxt0cyt0cxb1200cyb675.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/anti-gaspi/le-bout-noir-des-bananes-est-il-comestible-ou-non-s4070642.html",
+                    "name": "Le bout noir des bananes est-il comestible ou non ?",
+                    "image": "https://assets.afcdn.com/story/20230911/2228467_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/adresses/ce-marche-medieval-d-ile-de-france-peut-devenir-le-plus-beau-marche-de-france-sur-tf1-mais-il-lui-manque-encore-ca-s4131468.html",
+                    "name": "Le \"plus beau march\u00e9 de France\" se cache-t-il sous cette halle de 1479 ? Le pari fou de Milly-la-For\u00eat",
+                    "image": "https://assets.afcdn.com/story/20260505/2324285_w5438h3059cx2719cy1373cxt0cyt0cxb5438cyb2745.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/recettes/recette_foret-noire-express_30603.aspx",
+                    "name": "For\u00eat noire express",
+                    "image": "https://assets.afcdn.com/recipe/20211215/125895_w2121h1193cx778cy703cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_foret-noire_335011.aspx",
+                    "name": "For\u00eat noire facile",
+                    "image": "https://assets.afcdn.com/recipe/20150121/13414_w2448h1377cx1224cy1632.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://www.marmiton.org/recettes/recette_foret-noire_334516.aspx",
+                    "name": "For\u00eat noire simple",
+                    "image": "https://assets.afcdn.com/recipe/20150102/49681_w3888h2187cx1944cy1296.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx"
+            },
+            "name": "For\u00eat Noire : la meilleure recette",
+            "recipeCategory": "Dessert",
+            "image": [
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h1024c1cx960cy540cxt0cyt0cxb1920cyb1080.jpg",
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h1024c1cx960cy540cxt0cyt0cxb1920cyb1080.webp",
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h768c1cx960cy540cxt0cyt0cxb1920cyb1080.jpg",
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h768c1cx960cy540cxt0cyt0cxb1920cyb1080.webp",
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h576c1cx960cy540cxt0cyt0cxb1920cyb1080.jpg",
+                "https://assets.afcdn.com/recipe/20230620/143594_w1024h576c1cx960cy540cxt0cyt0cxb1920cyb1080.webp"
+            ],
+            "datePublished": "2006-10-23T11:43:00+02:00",
+            "dateModified": "2026-07-13T05:02:10+02:00",
+            "prepTime": "PT45M",
+            "cookTime": "PT30M",
+            "totalTime": "PT1H15M",
+            "recipeYield": "8 personnes",
+            "recipeIngredient": [
+                "4 oeufs",
+                "180 g de sucre",
+                "120 g de farine",
+                "1 sachet de levure",
+                "160 g de beurre fondu",
+                "100 g de chocolat",
+                "100 g de copeaux de chocolat",
+                "40 cl de cr\u00e8me fra\u00eeche enti\u00e8re",
+                "cerises confites maisons ou cerises \u00e0 l\u2019eau de vie"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "M\u00e9langer oeufs, sucre au fouet sur un bain-marie (pas trop chaud)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Ajouter farine tamis\u00e9e, levure et le beurre"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Ajouter le chocolat fondu (sur un bain-marie \u00e0 30, 35\u00b0C)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Faire cuire dans deux moules (diam\u00e8tre 20 ou 24) \u00e0 175\u00b0C pendant 30 minutes (chaleur conventionnelle)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Les copeaux sont r\u00e9alis\u00e9s par \u00e9talement en fine couche du chocolat fondu sur une plaque de marbre. Choisir le moment, ni trop froid, ni trop chaud pour les former."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Les g\u00e2teaux refroidis, les couper en deux, les imbiber du jus de cerise additionn\u00e9 de kirsch "
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Monter la cr\u00e8me en chantilly avec 100g de sucre glace."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Former le g\u00e2teau premi\u00e8re couche chantilly avec des morceaux de cerises deuxi\u00e8me couche une r\u00e9duction du jus de cerise avec un apport de sucre pour faire un caramel pas trop dur et derni\u00e8re couche de chantilly avec des morceaux de cerises."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Enduire le g\u00e2teau de chantilly et disposer les copeaux de chocolat."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pour un g\u00e2teau de 28 cm de diam\u00e8tre multiplier les proportions par 1,5."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Recette For\u00eat Noire : la meilleure recette rapide et facile : 8 personnes, 75 min de pr\u00e9paration. Not\u00e9e 4/5 par 11 membres Marmiton.",
+            "keywords": "For\u00eat Noire, for\u00eat noire, oeuf, sucre, farine, levure, beurre, chocolat, copeaux de chocolat, cr\u00e8me fra\u00eeche, cerises, Moyenne, Moyen",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 11,
+                "ratingValue": 4,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_foret-noire_11529.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "622 calories",
+                "servingSize": "164.5 grams",
+                "carbohydrateContent": "47.3 g",
+                "fatContent": "43.1 g",
+                "fiberContent": "3.1 g",
+                "proteinContent": "10 g",
+                "saturatedFatContent": "28.1 g",
+                "sodiumContent": "0.1 g",
+                "sugarContent": "34.5 g"
+            }
+        }
+    ]
+}

@@ -1,0 +1,394 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/plat-principal/",
+                        "name": "Plat principal"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/viande/",
+                        "name": "Viande"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/viande-en-sauce/",
+                        "name": "Viande en sauce"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx",
+                        "name": "Poulet yassa s\u00e9n\u00e9galais"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#breadcrumb"
+            },
+            "name": "Poulet yassa s\u00e9n\u00e9galais : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2020-06-04T18:03:19+02:00",
+            "dateModified": "2026-08-24T05:02:09+02:00",
+            "lastReviewed": "2026-08-24",
+            "description": "Recette Poulet yassa s\u00e9n\u00e9galais : la meilleure recette rapide et facile : 4 personnes, 70 min de pr\u00e9paration. Not\u00e9e 5/5 par 1 membres Marmiton.",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20200604/111706_w1500h844c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_poulet-senegalais-cacahuete_171493.aspx",
+                "https://www.marmiton.org/recettes/recette_yassa-au-poulet-senegal_11064.aspx",
+                "https://www.marmiton.org/recettes/recette_riz-senegalais_15857.aspx",
+                "https://www.marmiton.org/recettes/recette_yassa-de-poulet-senegal_12045.aspx",
+                "https://www.marmiton.org/recettes/recette_poulet-citron-oignons-poulet-yassa_21390.aspx",
+                "https://www.marmiton.org/recettes/recette_yassa-de-poulet-moutarde_337750.aspx",
+                "https://www.marmiton.org/recettes/recette_poulet-yassa-de-belle-maman-senegal_40600.aspx",
+                "https://www.marmiton.org/recettes/recette_yassa-a-ma-facon-cote-d-ivoire_305088.aspx",
+                "https://www.marmiton.org/recettes/recette_mafe-senegalais-a-la-facon-de-mon-pere_314674.aspx",
+                "https://www.marmiton.org/trucs-et-astuces/poulet-comment-bien-le-decongeler-sans-risque-pour-la-sante-s4067014.html",
+                "https://www.marmiton.org/cuisine-eco-et-maline/5-idees-de-recettes-pour-accompagner-un-poulet-roti-s4029958.html",
+                "https://www.marmiton.org/none/6-astuces-pour-reussir-la-cuisson-de-son-poulet-roti-a-coup-sur-s4033130.html",
+                "https://www.marmiton.org/restaurants/master-poulet-ce-que-cache-vraiment-l-origine-de-ce-poulet-pas-cher-que-tant-de-francais-adorent-s4131909.html",
+                "https://www.marmiton.org/mieux-cuisiner/j-ai-du-poulet-congele-depuis-2-ans-dans-mon-congelateur-est-ce-que-je-peux-vraiment-le-manger-s4118074.html",
+                "https://www.marmiton.org/bien-choisir-ses-aliments/connaissez-vous-la-difference-entre-un-poulet-label-rouge-et-un-poulet-classique-s4122332.html",
+                "https://www.marmiton.org/recettes/recette_poulet-yassa-oignons-citrons_36848.aspx",
+                "https://www.marmiton.org/recettes/recette_poulet-yassa-casamance_13770.aspx",
+                "https://www.marmiton.org/recettes/recette_poulet-yassa-par-laurent-mariotte_528920.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20200604/111706_w1500h844c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+            "contentUrl": "https://assets.afcdn.com/recipe/20200604/111706_w1500h844c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#primaryimage",
+            "caption": "Poulet yassa s\u00e9n\u00e9galais : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#video",
+            "name": "Poulet yassa s\u00e9n\u00e9galais",
+            "description": "Poulet yassa s\u00e9n\u00e9galais",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20200604/v_635322_w854h1518c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20200604/v_635322_HD.mp4",
+            "uploadDate": "2020-06-04T18:03:19+02:00",
+            "duration": "PT1M47S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx",
+            "numberOfItems": 14,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_poulet-senegalais-cacahuete_171493.aspx",
+                    "name": "Poulet s\u00e9n\u00e9galais au beurre de cacahu\u00e8te",
+                    "image": "https://assets.afcdn.com/recipe/20150318/65215_w2560h1440cx1280cy960.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_yassa-au-poulet-senegal_11064.aspx",
+                    "name": "Yassa au poulet (S\u00e9n\u00e9gal) ",
+                    "image": "https://assets.afcdn.com/recipe/20130623/52260_w512h288cx256cy192.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_riz-senegalais_15857.aspx",
+                    "name": "Riz s\u00e9n\u00e9galais",
+                    "image": "https://assets.afcdn.com/recipe/20180927/82371_w3865h2174cx1355cy1305cxt0cyt0cxb3861cyb2572.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_yassa-de-poulet-senegal_12045.aspx",
+                    "name": "Yassa de poulet (S\u00e9n\u00e9gal)",
+                    "image": "https://assets.afcdn.com/recipe/20150801/54805_w1536h864cx768cy768.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_yassa-de-poulet-moutarde_337750.aspx",
+                    "name": "Yassa de poulet moutard\u00e9",
+                    "image": "https://assets.afcdn.com/recipe/20150829/27688_w562h316cx281cy500.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_poulet-yassa-de-belle-maman-senegal_40600.aspx",
+                    "name": "Poulet yassa de belle maman (s\u00e9n\u00e9gal)",
+                    "image": "https://assets.afcdn.com/recipe/20180927/82370_w4000h2250cx2000cy1324cxt0cyt0cxb3999cyb2647.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/trucs-et-astuces/poulet-comment-bien-le-decongeler-sans-risque-pour-la-sante-s4067014.html",
+                    "name": "Poulet : comment bien le d\u00e9congeler sans risque pour la sant\u00e9 ?",
+                    "image": "https://assets.afcdn.com/story/20230707/2223268_w1800h1013cx900cy600cxt0cyt0cxb1800cyb1200.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/cuisine-eco-et-maline/5-idees-de-recettes-pour-accompagner-un-poulet-roti-s4029958.html",
+                    "name": "5 id\u00e9es de recettes pour accompagner un poulet r\u00f4ti",
+                    "image": "https://assets.afcdn.com/story/20210929/2139454_w2121h1193cx975cy669cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/none/6-astuces-pour-reussir-la-cuisson-de-son-poulet-roti-a-coup-sur-s4033130.html",
+                    "name": "6 astuces pour r\u00e9ussir la cuisson de son poulet r\u00f4ti \u00e0 coup s\u00fbr",
+                    "image": "https://assets.afcdn.com/story/20211202/2150329_w2058h1158cx782cy702cxt0cyt0cxb2058cyb1457.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/restaurants/master-poulet-ce-que-cache-vraiment-l-origine-de-ce-poulet-pas-cher-que-tant-de-francais-adorent-s4131909.html",
+                    "name": "Master Poulet : ce que cache vraiment l\u2019origine de ce poulet pas cher que tant de Fran\u00e7ais adorent",
+                    "image": "https://assets.afcdn.com/story/20260511/2324750_w6000h3375cx3000cy2000cxt0cyt0cxb6000cyb4000.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/mieux-cuisiner/j-ai-du-poulet-congele-depuis-2-ans-dans-mon-congelateur-est-ce-que-je-peux-vraiment-le-manger-s4118074.html",
+                    "name": "J'ai du poulet congel\u00e9 depuis 2 ans dans mon cong\u00e9lateur, est-ce que je peux vraiment le manger ?",
+                    "image": "https://assets.afcdn.com/story/20250916/2310074_w6720h3780cx3360cy2240cxt0cyt0cxb6720cyb4480.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/bien-choisir-ses-aliments/connaissez-vous-la-difference-entre-un-poulet-label-rouge-et-un-poulet-classique-s4122332.html",
+                    "name": "Connaissez-vous la diff\u00e9rence entre un poulet Label Rouge et un poulet classique ?",
+                    "image": "https://assets.afcdn.com/story/20251230/2315384_w2404h1352cx1202cy674cxt0cyt0cxb2404cyb1348.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_poulet-yassa-casamance_13770.aspx",
+                    "name": "Poulet Yassa (Casamance)",
+                    "image": "https://assets.afcdn.com/recipe/20100120/10655_w384h216cx192cy256.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "url": "https://www.marmiton.org/recettes/recette_poulet-yassa-par-laurent-mariotte_528920.aspx",
+                    "name": "Poulet Yassa par Laurent Mariotte",
+                    "image": "https://assets.afcdn.com/recipe/20201029/115097_w1920h1080cx960cy540cxt0cyt0cxb1920cyb1080.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx"
+            },
+            "name": "Poulet yassa s\u00e9n\u00e9galais : la meilleure recette",
+            "recipeCategory": "Plat principal",
+            "image": [
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h1024c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h1024c1cx404cy682cxt0cyt0cxb777cyb1600.webp",
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h768c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h768c1cx404cy682cxt0cyt0cxb777cyb1600.webp",
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h576c1cx404cy682cxt0cyt0cxb777cyb1600.jpeg",
+                "https://assets.afcdn.com/recipe/20200604/111706_w1024h576c1cx404cy682cxt0cyt0cxb777cyb1600.webp"
+            ],
+            "datePublished": "2020-06-04T18:03:19+02:00",
+            "dateModified": "2026-08-24T05:02:09+02:00",
+            "prepTime": "PT10M",
+            "cookTime": "PT1H",
+            "totalTime": "PT1H10M",
+            "recipeYield": "4 personnes",
+            "recipeIngredient": [
+                "4 cuisses de poulet",
+                "400 g de riz parfum\u00e9",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 de poivre",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 de sel",
+                "2 feuilles de laurier",
+                "8 oignons",
+                "3 \u00e9chalotes",
+                "4 gousses d'ail",
+                "1 cuill\u00e8re \u00e0 caf\u00e9 rase de gingembre",
+                "1 cuill\u00e8re \u00e0 soupe de vinaigre d'alcool color\u00e9",
+                "1 cube de bouillon de volaille",
+                "8 cuill\u00e8res \u00e0 soupe d'huile de tournesol",
+                "130 g d'olives",
+                "1 citron vert",
+                "2 cuill\u00e8res \u00e0 soupe de moutarde (facultatif)",
+                "1 piment (facultatif)",
+                "350 ml d'eau"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Dans une cocotte mettre l'huile \u00e0 chauffer puis saisir les cuisses de poulet, saler et poivrer."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Couper en lamelles fine les oignons et \u00e9chalotes, les ajouter dans la cocotte."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Remuez de temps en temps, cuire 5mn \u00e0 feu doux/moyen."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pendant ce temps, cuire votre riz selon votre mode de cuisson habituel."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Ajoutez progressivement dans la cocotte, le vinaigre, les feuilles de laurier, les gousses d'ail, le cube."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Baissez le feu et cuire encore 5mn tout en remuant. Les oignons commencent \u00e0 r\u00e9duire et dorer."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sortez les cuisses de poulet, les mettre sur une plaque au four avec un peu d'eau et les faire dorer de chaque cot\u00e9 pendant 20mn."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Ajouter l'eau, les olives, le piment et laisser mijoter pendant 20mn \u00e0 petit feu avec le couvercle."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "\u00c9teindre le feu puis mettre le jus de citron vert. Servez avec le riz."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Recette Poulet yassa s\u00e9n\u00e9galais : la meilleure recette rapide et facile : 4 personnes, 70 min de pr\u00e9paration. Not\u00e9e 5/5 par 1 membres Marmiton.",
+            "keywords": "Poulet yassa s\u00e9n\u00e9galais, poulet en sauce, cuisse de poulet, riz, poivre, sel, laurier, oignon, \u00e9chalote, ail, gingembre, vinaigre d'alcool, bouillon de volaille, huile de tournesol, olives, citron vert, moutarde, piment, eau, Tr\u00e8s facile, Bon march\u00e9",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 1,
+                "ratingValue": 5,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_poulet-yassa-senegalais_392567.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1289 calories",
+                "servingSize": "876.5 grams",
+                "carbohydrateContent": "57.6 g",
+                "fatContent": "83.2 g",
+                "fiberContent": "7.3 g",
+                "proteinContent": "71 g",
+                "saturatedFatContent": "16.4 g",
+                "sodiumContent": "4.5 g",
+                "sugarContent": "11.5 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/LowLactoseDiet"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_sex-on-the-beach_371680.aspx
+captured_at: 2026-09-24
+page_modified: 2024-11-12
+recipe_name: Sex on the beach
+servings_displayed: 1

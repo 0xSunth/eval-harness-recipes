@@ -1,0 +1,5 @@
+url: https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx
+captured_at: 2026-09-24
+page_modified: 2026-04-27
+recipe_name: Taboulé rapide
+servings_displayed: 6

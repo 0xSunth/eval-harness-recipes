@@ -1,0 +1,357 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsMediaOrganization",
+            "@id": "https://www.marmiton.org/#newsmediaorganization",
+            "name": "Marmiton",
+            "alternateName": "marmiton.org",
+            "url": "https://www.marmiton.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.marmiton.org/#/schema/logo/image/",
+                "url": "https://statics.marmiton.fr/assets/images/logo-gnsUou_.png",
+                "width": 309,
+                "height": 48,
+                "caption": "Marmiton : 78414 recettes de cuisine comment\u00e9es et not\u00e9es pour toutes les cuisines !"
+            },
+            "sameAs": [
+                "https://www.facebook.com/marmiton",
+                "https://www.instagram.com/marmiton_org/",
+                "https://www.pinterest.fr/marmiton/",
+                "https://www.tiktok.com/@marmiton_org",
+                "https://www.youtube.com/user/marmitonofficiel",
+                "https://fr.wikipedia.org/wiki/Marmiton.org",
+                "https://www.wikidata.org/wiki/Q3294503"
+            ],
+            "image": {
+                "@id": "https://www.marmiton.org/#/schema/logo/image/"
+            },
+            "foundingDate": "1999",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Reworld Media",
+                "url": "https://www.reworldmedia.com"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.marmiton.org/#website",
+            "name": "Marmiton",
+            "url": "https://www.marmiton.org",
+            "publisher": {
+                "@id": "https://www.marmiton.org/#newsmediaorganization"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.marmiton.org/recettes/recherche.aspx?aqt={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://www.marmiton.org/",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes",
+                        "name": "Recettes"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/salade/",
+                        "name": "Salade"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/index/categorie/taboule/",
+                        "name": "Taboul\u00e9"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx",
+                        "name": "Taboul\u00e9 rapide"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx",
+            "url": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx",
+            "breadcrumb": {
+                "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#breadcrumb"
+            },
+            "name": "Taboul\u00e9 rapide : la meilleure recette",
+            "isPartOf": {
+                "@id": "https://www.marmiton.org/#website"
+            },
+            "datePublished": "2010-01-21T03:35:00+01:00",
+            "dateModified": "2026-04-27T05:01:50+02:00",
+            "lastReviewed": "2026-04-27",
+            "description": "Frais et parfum\u00e9, le taboul\u00e9 est le compagnon id\u00e9al des beaux jours. Avec sa semoule l\u00e9g\u00e8re, ses l\u00e9gumes croquants et sa menthe cisel\u00e9e, il apporte soleil et convivialit\u00e9 \u00e0 toutes les tables, pique-niques compris.\n",
+            "inLanguage": "fr-FR",
+            "potentialAction": {
+                "@type": "ReadAction",
+                "target": [
+                    "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx"
+                ]
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#primaryimage"
+            },
+            "image": {
+                "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#primaryimage"
+            },
+            "thumbnailUrl": "https://assets.afcdn.com/recipe/20200518/111358_w1500h844c1cx540cy960cxt0cyt0cxb1080cyb1920.webp",
+            "relatedLink": [
+                "https://www.marmiton.org/recettes/recette_taboule-express_73614.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-a-ma-facon_37892.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-au-thermomix_537180.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-de-choux-fleur_169110.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-boulgour_10829.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-a-l-orange_83909.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-a-la-menthe_37752.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-ultra-facile_15832.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-au-thon_25897.aspx",
+                "https://www.marmiton.org/none/comment-preparer-la-semoule-pour-un-taboule-parfait-s4066171.html",
+                "https://www.marmiton.org/recettes/index/ingredient/semoule-moyenne",
+                "https://www.marmiton.org/trucs-et-astuces/taboule-maison-nos-conseils-pour-le-preparer-en-avance-et-le-conserver-pendant-plusieurs-jours-s4067284.html",
+                "https://www.marmiton.org/cuisine-facile/taboule-10-idees-pour-le-revisiter-s4013972.html",
+                "https://www.marmiton.org/bien-choisir-ses-aliments/cette-reference-de-taboule-est-la-meilleure-pour-votre-sante-selon-yuka-avec-une-note-de-100-100-s4084959.html",
+                "https://www.marmiton.org/recettes/index/ingredient/concombre",
+                "https://www.marmiton.org/recettes/recette_taboule_10912.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-de-meme_25736.aspx",
+                "https://www.marmiton.org/recettes/recette_taboule-original_339383.aspx"
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "fr-FR",
+            "url": "https://assets.afcdn.com/recipe/20200518/111358_w1500h844c1cx540cy960cxt0cyt0cxb1080cyb1920.webp",
+            "contentUrl": "https://assets.afcdn.com/recipe/20200518/111358_w1500h844c1cx540cy960cxt0cyt0cxb1080cyb1920.webp",
+            "width": 1500,
+            "height": 844,
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#primaryimage",
+            "caption": "Taboul\u00e9 rapide : la meilleure recette"
+        },
+        {
+            "@type": "VideoObject",
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#video",
+            "name": "Taboul\u00e9 rapide",
+            "description": "Taboul\u00e9 rapide",
+            "thumbnailUrl": "https://assets.afcdn.com/video13/20200517/v_634994_w854h854c1.webp",
+            "contentUrl": "https://assets.afcdn.com/video13/20200517/v_634994_HD.mp4",
+            "uploadDate": "2010-01-21T03:35:00+01:00",
+            "duration": "PT50S"
+        },
+        {
+            "@type": "ItemList",
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#itemlist",
+            "url": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx",
+            "numberOfItems": 13,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-express_73614.aspx",
+                    "name": "Taboul\u00e9 express",
+                    "image": "https://assets.afcdn.com/recipe/20180228/77774_w5616h3159cx2808cy1872cxt0cyt0cxb5616cyb3744.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-au-thermomix_537180.aspx",
+                    "name": "Taboul\u00e9 au Thermomix",
+                    "image": "https://assets.afcdn.com/recipe/20240814/153364_w1200h675cx600cy337cxt0cyt0cxb1200cyb675.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-de-choux-fleur_169110.aspx",
+                    "name": "Taboul\u00e9 de choux fleur",
+                    "image": "https://assets.afcdn.com/recipe/20170604/59401_w720h405cx360cy545.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-a-l-orange_83909.aspx",
+                    "name": "Taboul\u00e9 \u00e0 l'orange",
+                    "image": "https://assets.afcdn.com/recipe/20190615/93933_w4608h2592cx2304cy1728cxt0cyt0cxb4608cyb3456.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-a-la-menthe_37752.aspx",
+                    "name": "Taboul\u00e9 \u00e0 la menthe",
+                    "image": "https://assets.afcdn.com/recipe/20131118/14443_w2500h1406cx1250cy1875.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-ultra-facile_15832.aspx",
+                    "name": "Taboul\u00e9 ultra-facile",
+                    "image": "https://assets.afcdn.com/recipe/20161116/59371_w5096h2867cx2548cy1699.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "url": "https://www.marmiton.org/none/comment-preparer-la-semoule-pour-un-taboule-parfait-s4066171.html",
+                    "name": "Comment pr\u00e9parer la semoule pour un taboul\u00e9 vraiment parfait ?",
+                    "image": "https://assets.afcdn.com/story/20230622/2222011_w7015h3946cx3508cy2341cxt0cyt0cxb7015cyb4682.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "url": "https://www.marmiton.org/trucs-et-astuces/taboule-maison-nos-conseils-pour-le-preparer-en-avance-et-le-conserver-pendant-plusieurs-jours-s4067284.html",
+                    "name": "Taboul\u00e9 maison : nos conseils pour le pr\u00e9parer en avance et le conserver pendant plusieurs jours",
+                    "image": "https://assets.afcdn.com/story/20230712/2223682_w1800h1013cx900cy600cxt0cyt0cxb1800cyb1199.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "url": "https://www.marmiton.org/cuisine-facile/taboule-10-idees-pour-le-revisiter-s4013972.html",
+                    "name": "Taboul\u00e9 : 10 id\u00e9es pour le revisiter",
+                    "image": "https://assets.afcdn.com/story/20200629/2066452_w2121h1193cx1061cy707cxt0cyt0cxb2121cyb1414.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "url": "https://www.marmiton.org/bien-choisir-ses-aliments/cette-reference-de-taboule-est-la-meilleure-pour-votre-sante-selon-yuka-avec-une-note-de-100-100-s4084959.html",
+                    "name": "Cette r\u00e9f\u00e9rence de taboul\u00e9 est la meilleure pour votre sant\u00e9 selon Yuka avec une note de 100/100",
+                    "image": "https://assets.afcdn.com/story/20240512/2249309_w1200h675cx600cy315cxt0cyt0cxb1200cyb630.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule_10912.aspx",
+                    "name": "Taboul\u00e9",
+                    "image": "https://assets.afcdn.com/recipe/20190704/94694_w5616h3159cx2808cy1872cxt0cyt0cxb5616cyb3744.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-de-meme_25736.aspx",
+                    "name": "Taboul\u00e9 de m\u00e9m\u00e9",
+                    "image": "https://assets.afcdn.com/recipe/20140701/57578_w4125h2320cx2062cy1375.webp"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "url": "https://www.marmiton.org/recettes/recette_taboule-original_339383.aspx",
+                    "name": "Taboul\u00e9 original",
+                    "image": "https://assets.afcdn.com/recipe/20190813/96279_w5505h3097cx2752cy1835cxt0cyt0cxb5505cyb3670.webp"
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#recipe",
+            "mainEntityOfPage": {
+                "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx"
+            },
+            "name": "Taboul\u00e9 rapide : la meilleure recette",
+            "recipeCategory": "Entr\u00e9e",
+            "image": [
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h1024c1cx540cy960cxt0cyt0cxb1080cyb1920.jpg",
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h1024c1cx540cy960cxt0cyt0cxb1080cyb1920.webp",
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h768c1cx540cy960cxt0cyt0cxb1080cyb1920.jpg",
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h768c1cx540cy960cxt0cyt0cxb1080cyb1920.webp",
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h576c1cx540cy960cxt0cyt0cxb1080cyb1920.jpg",
+                "https://assets.afcdn.com/recipe/20200518/111358_w1024h576c1cx540cy960cxt0cyt0cxb1080cyb1920.webp"
+            ],
+            "datePublished": "2010-01-21T03:35:00+01:00",
+            "dateModified": "2026-04-27T05:01:50+02:00",
+            "prepTime": "PT20M",
+            "cookTime": "PT0S",
+            "totalTime": "PT20M",
+            "recipeYield": "6 personnes",
+            "recipeIngredient": [
+                "5 tomates moyennes",
+                "1 concombre",
+                "1 oignon blanc \u00e9pluch\u00e9",
+                "6 branches de menthe",
+                "200 ml de jus de citron",
+                "4 cuill\u00e8res \u00e0 soupe de persil hach\u00e9 surgel\u00e9",
+                "1 cuill\u00e8re de sel",
+                "1 pinc\u00e9e de poivre",
+                "400 g de semoule moyenne"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Laver, \u00f4tez le p\u00e9doncule des tomates et coupez-les en 4. Mixez-les dans un robot. Disposez-les dans un saladier."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "\u00c9pluchez le concombre, coupez-le en gros cubes et mixez-le dans le robot. Disposez-les avec les tomates."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "\u00c9pluchez l'oignon blanc, coupez-le en 4 et disposez-le dans le robot, ajoutez les feuilles de menthe et le jus de citron. Mixez et versez le m\u00e9lange avec les tomates et le concombre."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Ajoutez le persil, le sel, le poivre et la semoule, Remuez bien, poser un couvercle dessus et laissez reposer 35 minutes au frigo pour permettre \u00e0 la semoule de gonfler."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Servir tr\u00e8s frais."
+                }
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Anonyme"
+            },
+            "description": "Frais et parfum\u00e9, le taboul\u00e9 est le compagnon id\u00e9al des beaux jours. Avec sa semoule l\u00e9g\u00e8re, ses l\u00e9gumes croquants et sa menthe cisel\u00e9e, il apporte soleil et convivialit\u00e9 \u00e0 toutes les tables, pique-niques compris.\n",
+            "keywords": "Taboul\u00e9 rapide, Taboul\u00e9, tomate, concombre, oignon blanc, menthe, jus de citron, persil, sel, poivre, semoule moyenne, Tr\u00e8s facile, Bon march\u00e9, rapide",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "reviewCount": 39,
+                "ratingValue": 4.3,
+                "worstRating": 1,
+                "bestRating": 5
+            },
+            "video": {
+                "@id": "https://www.marmiton.org/recettes/recette_taboule-rapide_93815.aspx#video"
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "281 calories",
+                "servingSize": "281.8 grams",
+                "carbohydrateContent": "53.1 g",
+                "fatContent": "1.5 g",
+                "fiberContent": "4.9 g",
+                "proteinContent": "10 g",
+                "saturatedFatContent": "0.3 g",
+                "sodiumContent": "2 g",
+                "sugarContent": "5.3 g"
+            },
+            "suitableForDiet": [
+                "https://schema.org/VegetarianDiet",
+                "https://schema.org/VeganDiet",
+                "https://schema.org/LowLactoseDiet"
+            ]
+        }
+    ]
+}
