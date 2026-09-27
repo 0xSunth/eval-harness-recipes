@@ -1,0 +1,51 @@
+{
+    "case": "010",
+    "annotated_at": "2026-09-27",
+    "spec_commit": "76ef874",
+    "expected": {
+        "servings": 4,
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 60,
+        "ingredients": [
+            { "name": "riz", "quantity": 400,"unit": "g","unit_is_metric": true,"preparation": null,"variant": "parfumé","alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sel", "quantity": 1,"unit": "cuillère à café","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "poivre", "quantity": 1,"unit": "cuillère à café","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "oignon", "quantity": 8,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "gingembre", "quantity": 1,"unit": "cuillère à café","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "huile de tournesol", "quantity": 8,"unit": "cuillère à soupe","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "moutarde", "quantity": 2,"unit": "cuillère à soupe","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "vinaigre d'alcool", "quantity": 1,"unit": "cuillère à soupe","unit_is_metric": false,"preparation": null,"variant": "coloré","alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "piment", "quantity": 1,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "cuisse de poulet", "quantity": 4,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "laurier", "quantity": 2,"unit": "feuille","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "échalote", "quantity": 3,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "ail", "quantity": 4,"unit": "gousse","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "bouillon de volaille", "quantity": 1,"unit": "cube","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "olive", "quantity": 130,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "citron vert", "quantity": 1,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "eau", "quantity": 350,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false }
+        ],
+        "instructions": [
+            { "position": 1, "text": "Dans une cocotte mettre l'huile à chauffer puis saisir les cuisses de poulet, saler et poivrer." },
+            { "position": 2, "text": "Couper en lamelles fine les oignons et échalotes, les ajouter dans la cocotte." },
+            { "position": 3, "text": "Remuez de temps en temps, cuire 5mn à feu doux/moyen." },
+            { "position": 4, "text": "Pendant ce temps, cuire votre riz selon votre mode de cuisson habituel." },
+            { "position": 5, "text": "Ajoutez progressivement dans la cocotte, le vinaigre, les feuilles de laurier, les gousses d'ail, le cube." },
+            { "position": 6, "text": "Baissez le feu et cuire encore 5mn tout en remuant. Les oignons commencent à réduire et dorer." },
+            { "position": 7, "text": "Sortez les cuisses de poulet, les mettre sur une plaque au four avec un peu d'eau et les faire dorer de chaque coté pendant 20mn." },
+            { "position": 8, "text": "Ajouter l'eau, les olives, le piment et laisser mijoter pendant 20mn à petit feu avec le couvercle." },
+            { "position": 9, "text": "Éteindre le feu puis mettre le jus de citron vert. Servez avec le riz." }
+        ]
+    },
+    "decisions": [
+        { "line": "Cuisson : 1h", "rules": ["R-09"], "note": "cook time is the Cuisson header, not Temps total; I-08: 10 + 60 = 70" },
+        { "line": "400 g de riz parfumé", "rules": ["R-06"], "note": "parfumé narrows the product, no choice offered" },
+        { "line": "1 cuillère à café rase de gingembre", "rules": ["R-02"], "note": "rase modifies the measure, not the product: not stored" },
+        { "line": "2 cuillères à soupe de moutarde (facultatif)", "rules": ["R-04", "R-02"], "note": "facultatif stripped" },
+        { "line": "1 cuillère à soupe de vinaigre d'alcool coloré", "rules": ["R-06", "R-02"], "note": "coloré is a catalogue distinction" },
+        { "line": "1 piment (facultatif)", "rules": ["R-04", "R-10"], "note": "facultatif stripped" },
+        { "line": "4 cuisses de poulet", "rules": ["R-10"], "note": "a cut priced on its own: part of the name (Q-10, provisional)" },
+        { "line": "2 feuilles de laurier", "rules": ["R-02"], "note": "feuille is a portion of a product priced as a whole, like gousse (Q-10, provisional)" },
+        { "line": "1 cube de bouillon de volaille", "rules": ["R-02"], "note": "cube added to the closed list" }
+    ]
+  }
