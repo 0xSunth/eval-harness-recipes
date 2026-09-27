@@ -1,0 +1,62 @@
+{
+    "case": "003",
+    "annotated_at": "2026-09-27",
+    "spec_commit": "e8c00ec",
+    "expected": {
+        "servings": 8,
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 30,
+        "ingredients": [
+            { "name": "sel", "quantity": 1,"unit": "pincée","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "beurre", "quantity": 40,"unit": "g","unit_is_metric": true,"preparation": null,"variant": "semi-sel","alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "beurre", "quantity": 20,"unit": "g","unit_is_metric": true,"preparation": null,"variant": "semi-sel","alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "farine", "quantity": 100,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "cerise", "quantity": 600,"unit": "g","unit_is_metric": true,"preparation": null,"variant": "fraîches ou surgelées","alternative": null,"component": null,"needs_manager_choice": true },
+            { "name": "œuf", "quantity": 4,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "lait", "quantity": 200,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sucre en poudre", "quantity": 60,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sucre vanillé", "quantity": 1,"unit": "sachet","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sucre glace", "quantity": null,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false }
+        ],
+        "instructions": [
+            { "position": 1, "text": "Préchauffez le four à 210°C (thermostat 7). Lavez rapidement les cerises sous un filet d'eau fraîche, équeutez-les et égouttez-les. Personnellement j'enlève les noyaux, mais la recette traditionnelle veut qu'on les laisse, donc c'est à vous de voir si vous les laissez ou pas... Faites fondre les 40 g de beurre dans une petite casserole à fond épais. Mélangez dans un grand bol la farine, le sucre, le sel et le sucre vanillé. Incorporez les oeufs peu à peu puis le lait petit à petit en continuant de mélanger. Ajoutez le beurre fondu." },
+            { "position": 2, "text": "Beurrez grassement le plat, rangez les cerises puis versez la pâte à clafoutis. Mettez au four pendant 10 mn à 210°C puis baissez à 180°C et cuisez encore 20 mn." },
+            { "position": 3, "text": "Servez le clafoutis froid ou tiède, saupoudré de sucre glace." }
+        ]
+    },
+    "decisions": [
+        { 
+            "line": "1 pincée de sel", 
+            "rules": ["R-02"]
+        },
+        { 
+            "line": "40 g de beurre semi-sel + 20 g pour le moule", 
+            "rules": ["R-06", "R-13"], 
+            "note": "Never summed: 60 g is written nowhere on the page." 
+        },
+        { 
+            "line": "600 g de cerises fraîches ou surgelées", 
+            "rules": ["R-06"],
+            "note": "One ingredient, two qualifiers: fresh or frozen. The whole qualifier goes to variant and neither is picked, because the prices differ and the page does not decide. Not R-05, which is for two different ingredients."
+        },
+
+        { 
+            "line": "4 oeufs", 
+            "rules": ["R-10"], 
+            "note": "Countable with no unit word: the count goes to quantity, unit is null, the name is singular. The page writes 'oeufs'; the canonical name is 'œuf' (§6), and how the normalizer gets there is Q-06."
+        },
+        { 
+            "line": "20 cl de lait", 
+            "rules": ["R-08"], 
+            "note": "Volume converted to millilitres: 20 cl becomes 200 ml. Allowed because the factor is fixed by the unit, not by the ingredient."
+        },
+        { 
+            "line": "1 sachet de sucre vanillé", 
+            "rules": ["R-02"]
+        },
+        { 
+            "line": "sucre glace", 
+            "rules": ["R-07"]
+        }
+    ]
+  }
