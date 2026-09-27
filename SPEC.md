@@ -40,6 +40,7 @@ One row per canonical **type**, not per field: two fields sharing a canonical ty
 | Canonical type | Source forms (observed on the 10 captured cases)                      | Canonical form                                                        | Decided by       |
 | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------- |
 | Duration       | `PT20M`, `PT1H30M`, `PT0S` (reference); `20 min`, `1h`, `1h20`, `-` (visible header) | integer, minutes; `-` and `PT0S` become `0`                      | R-09             |
+| Yield          | `4 personnes`, `8 Personnes`, `1 verre`                                | integer; a unit outside R-12's closed list becomes `null`             | R-12             |
 | Mass           | `500 g`, `1 kg`, `1,5 kg`                                             | decimal, grams                                                        | R-08             |
 | Volume         | `25 cl`, `0,25 l`, `250 ml`                                           | decimal, millilitres                                                  | R-08             |
 | Non-metric     | `1 sachet`, `2 cuillères à soupe`                                     | quantity as given, unit verbatim from a closed list                   | R-02             |
@@ -228,6 +229,16 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 
 
 
+### R-12 — Yield expressed in a unit other than persons
+
+- **Situation** — the page states the yield with a unit that is not `personnes`: `1 verre` for a cocktail (case 008), and on other pages `6 pièces`, `8 parts`, `12 verrines`. Not to be confused with `verre` as an ingredient unit under R-02: this rule is about `servings` only.
+- **Decision** — `servings` holds the number when the unit belongs to a **closed list** of units that each denote one cover: `personne`, `verre`, singular or plural, any case. Any other unit yields `null` under R-07. The unit word itself is not stored.
+- **Reason** — `servings` is the divisor of the cost per cover. A glass is the unit a cocktail is sold by, so one glass is one cover. A piece is not: twelve biscuits may be three plates, and dividing by twelve would publish a wrong menu price that passes review unnoticed. `null` is visible and costs the manager seconds.
+- **Consequence** — both sides go through the same normalizer, so the choice does not move the comparison; it protects the consumer. An unlisted unit fails loudly as `null` instead of becoming a silent divisor. The list grows only when a new unit is observed and argued.
+- **Status** — #provisional. 1/10 cases (008, `1 verre`). `personne` covers the nine others.
+
+
+
 ## 5. Invariants
 
 Checks a verifier runs on the produced record. **These are not schema fields** — nothing here is annotated by hand. An invariant that needs no reference also works in production, where no reference exists. Mark that column honestly.
@@ -266,6 +277,7 @@ Derived from the rules, not invented. Each rule describes a situation; that situ
 | Case                                                                                  | Source         | Rule tested       | Expected behaviour                                                           |
 | ------------------------------------------------------------------------------------- | -------------- | ----------------- | ---------------------------------------------------------------------------- |
 | `Crème fraîche entière`                                                               | real, case 005 | R-06              | `name: "crème fraîche"`, `variant: "entière"`, `needs_manager_choice: false` |
+| `1 verre` as the yield of a cocktail                                                     | real, case 008 | R-12              | `servings: 1`                                                                |
 | `Préparation : 20 min`                                                                 | real, case 001 | R-09              | `20`                                                                         |
 | `Cuisson : 1h`                                                                         | real, cases 001, 010 | R-09        | `60`                                                                         |
 | `Temps total : 1h20`                                                                   | real, case 001 | R-09, I-08        | `80`, equals `20` + `60`, no flag                                            |
@@ -341,6 +353,9 @@ Rules changed after seeing real data. Keeping this visible is the point: it show
 | 2026-09-26 | I-08, §6 | case 001 cited as `prepTime PT15M`, `cookTime PT45M`, `totalTime PT1H` | `PT20M`, `PT1H`, `PT1H20M`, as in `cases/raw/001/page.ld.json` | checked against the file while sweeping the durations: the cited values matched no captured page, the real ones agree with the visible header `20 min`, `1h`, `1h20` |
 | 2026-09-26 | §3, R-11, Q-05 | `component` verified by "reference, to confirm" | hand-annotated, out of the headline metric; Q-05 resolved as (b) | case 007: headings on the page, absent from the flat JSON-LD `recipeIngredient` array |
 | 2026-09-26 | R-11 | trailing punctuation unstated | trailing colon and the space before it removed | case 007 writes `Pour la pâte :` with a space before the colon; applied as written, the rule gave `pâte :` |
+| 2026-09-27 | cases 001 to 010 | captured without the yield | the yield line restored in every `input.txt` under `Ingrédients`, as the page writes it (`4 personnes`, `1 verre`) | annotating case 002: the JSON-LD says `4 personnes`, the input said nothing, so the extractor was forced to `null` on a field the reference fills. Same capture gap as the durations |
+| 2026-09-27 | R-12, §2 | yield unit unstated; `servings` assumed to count persons | R-12 added: closed list `personne`, `verre`; any other unit becomes `null` | case 008, a cocktail, states its yield as `1 verre`. Two annotators could write `1` or `null`, which is the definition of a missing rule |
+| 2026-09-27 | split | `cases/split.json` rationale: case 008 fires no rule at all | case 008 fires R-09 and R-12; the split is frozen and not reshuffled | the rationale was written against the coverage table of 2026-09-25. Since then R-09 was counted on all ten cases and R-12 was added on 008. Consequence for the split: R-12 is dev only, one occurrence |
 
 
 ## 9. Rule coverage on the case set
@@ -361,8 +376,9 @@ How often each rule fires on the 10 captured cases. A score is only readable nex
 | R-09 | all ten                             | 10/10 | settled                               |
 | R-10 | all but 008                         | 9/10  | settled                               |
 | R-11 | 007                                 | 1/10  | #provisional                          |
+| R-12 | 008                                 | 1/10  | #provisional, dev only                |
 
 
-**Ten of the eleven rules fire at least once on these ten cases. R-03 fires zero times and is excluded from the metric.** An earlier wording of this paragraph claimed ten out of eleven while R-11's count was still unknown: a figure asserted beyond its own data, in the project whose subject is precisely that. R-11 has since been counted on case 007, which makes the claim true. The episode is recorded rather than quietly erased.
+**Eleven of the twelve rules fire at least once on these ten cases. R-03 fires zero times and is excluded from the metric.** An earlier wording of this paragraph claimed ten out of eleven while R-11's count was still unknown: a figure asserted beyond its own data, in the project whose subject is precisely that. R-11 has since been counted on case 007, which made the claim true; R-12, added on case 008, brings it to eleven of twelve. The episode is recorded rather than quietly erased.
 
 Any figure published in `Results` carries this table, its denominator per field, and the exclusions declared in §4.
