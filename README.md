@@ -17,7 +17,8 @@ Work in progress, started September 2026.
 - [x] Target schema and normalization rules (`SPEC.md`)
 - [x] Frozen dev/test split (`cases/split.json`)
 - [x] Target schema in code (`task/schema.py`)
-- [ ] Annotated dev case set
+- [x] Freeze SPEC before annotating the test cases
+- [x] Annotated dev case set
 - [ ] Normalizer and its unit tests
 - [ ] Field-level comparator (precision / recall)
 - [ ] Internal-coherence verifier
