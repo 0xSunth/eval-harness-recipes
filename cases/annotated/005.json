@@ -1,0 +1,60 @@
+{
+    "case": "005",
+    "annotated_at": "2026-09-27",
+    "spec_commit": "c64b77e",
+    "expected": {
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 30,
+        "ingredients": [
+            { "name": "chocolat", "quantity": 100,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sucre", "quantity": 180,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "beurre", "quantity": 160,"unit": "g","unit_is_metric": true,"preparation": "fondu","variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "levure", "quantity": 1,"unit": "sachet","unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "crème fraîche", "quantity": 400,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": "entière","alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "farine", "quantity": 120,"unit": "g","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "œuf", "quantity": 4,"unit": null,"unit_is_metric": false,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "chocolat", "quantity": 100,"unit": "g","unit_is_metric": true,"preparation": "copeaux","variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "cerise", "quantity": null, "unit": null, "unit_is_metric": false, "preparation": null, "variant": "confites maisons ou à l’eau de vie", "alternative": null, "component": null, "needs_manager_choice": true }
+        ],
+        "instructions": [
+            { "position": 1, "text": "Mélanger oeufs, sucre au fouet sur un bain-marie (pas trop chaud)." },
+            { "position": 2, "text": "Ajouter farine tamisée, levure et le beurre" },
+            { "position": 3, "text": "Ajouter le chocolat fondu (sur un bain-marie à 30, 35°C)." },
+            { "position": 4, "text": "Faire cuire dans deux moules (diamètre 20 ou 24) à 175°C pendant 30 minutes (chaleur conventionnelle)." },
+            { "position": 5, "text": "Les copeaux sont réalisés par étalement en fine couche du chocolat fondu sur une plaque de marbre. Choisir le moment, ni trop froid, ni trop chaud pour les former." },
+            { "position": 6, "text": "Les gâteaux refroidis, les couper en deux, les imbiber du jus de cerise additionné de kirsch" },
+            { "position": 7, "text": "Monter la crème en chantilly avec 100g de sucre glace." },
+            { "position": 8, "text": "Former le gâteau première couche chantilly avec des morceaux de cerises deuxième couche une réduction du jus de cerise avec un apport de sucre pour faire un caramel pas trop dur et dernière couche de chantilly avec des morceaux de cerises." },
+            { "position": 9, "text": "Enduire le gâteau de chantilly et disposer les copeaux de chocolat." },
+            { "position": 10, "text": "Pour un gâteau de 28 cm de diamètre multiplier les proportions par 1,5." }
+        ]
+    },
+    "decisions": [
+        {
+            "line": "160 g de beurre fondu",
+            "rules": ["R-01"],
+            "note": "Butter is bought solid and melted in the kitchen: 'fondu' is a preparation, not a qualifier."
+        },
+        {
+            "line": "40 cl de crème fraîche entière",
+            "rules": ["R-06", "R-08"],
+            "note": "Two rules on one line. R-08: 40 cl becomes 400 ml, allowed because the factor is fixed by the unit, not by the ingredient. R-06: whole cream is another product than light cream, so 'entière' goes to variant."
+        },
+        {
+            "line": "4 oeufs",
+            "rules": ["R-10"],
+            "note": "Countable with no unit word: the count goes to quantity, unit is null, the name is singular. The page writes 'oeufs'; the canonical name is 'œuf', see Q-06."
+        },
+        {
+            "line": "100 g de copeaux de chocolat",
+            "rules": ["R-01"],
+            "note": "A preparation written as a noun: step 5 says the shavings are made in the kitchen from melted chocolate. Chocolate is what is bought, so 'copeaux' goes to preparation. The two 'chocolat' records are two lines of the page, a legitimate duplicate flagged by I-09."
+        },
+        {
+            "line": "cerises confites maisons ou cerises à l’eau de vie",
+            "rules": ["R-06", "R-07"],
+            "note": "Same ingredient on both sides of 'ou': a choice between two qualifiers, R-06, not R-05. The whole choice goes to variant, the repeated 'cerises' is dropped since name holds it, and nothing is picked because the page does not decide. No quantity is written: quantity is null under R-07."
+        }
+    ]
+  }
