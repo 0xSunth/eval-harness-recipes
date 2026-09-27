@@ -110,3 +110,17 @@ def test_annotation_matches_schema(case_file):
     data = json.loads(case_file.read_text(encoding="utf-8"))
     assert data["case"] == case_file.stem, "file name and 'case' field disagree"
     validate(data["expected"])
+
+
+@pytest.mark.parametrize("case_file", ANNOTATED, ids=lambda p: p.stem)
+def test_annotation_respects_invariants(case_file):
+    data = json.loads(case_file.read_text(encoding="utf-8"))
+    recipe = validate(data["expected"])
+    for ing in recipe.ingredients:
+        assert ing.unit_is_metric == (ing.unit in ("g", "ml")), f"I-02: {ing.name}"
+        if ing.unit is not None:
+            assert ing.quantity is not None, f"I-04: {ing.name}"
+        if (ing.variant and " ou " in ing.variant) or ing.alternative:
+            assert ing.needs_manager_choice, f"I-03: {ing.name}"
+    positions = [step.position for step in recipe.instructions]
+    assert positions == list(range(1, len(positions) + 1)), f"I-06: {positions}"
