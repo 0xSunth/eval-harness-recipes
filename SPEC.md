@@ -45,7 +45,7 @@ One row per canonical **type**, not per field: two fields sharing a canonical ty
 | Volume         | `25 cl`, `0,25 l`, `250 ml`                                                          | decimal, millilitres                                                    | R-08             |
 | Non-metric     | `1 sachet`, `2 cuillères à soupe`                                                    | quantity as given, unit verbatim from a closed list                     | R-02             |
 | Countable      | `3 œufs`, `1 citron`                                                                 | integer, `unit` null                                                    | R-10             |
-| Name           | `les Œufs`, `3 oeufs`, `Cerises dénoyautées`, `Crème fraîche entière`                | bare ingredient, singular, lowercase, no preparation and no qualifier   | R-01, R-06, R-10 |
+| Name           | `les Œufs`, `3 oeufs`, `Cerises dénoyautées`, `Crème fraîche entière`                | bare ingredient, lowercase, no preparation and no qualifier; the plural of what is bought is removed (`œufs` → `œuf`), the plural of what the product is made of stays (`jus de cranberries`)   | R-01, R-06, R-10 |
 | Step text      | `"...les saveurs. "` (reference, trailing space), `...les saveurs.` (visible)        | verbatim, leading and trailing whitespace removed, nothing else touched | §2               |
 
 
@@ -398,7 +398,7 @@ Rules changed after seeing real data. Keeping this visible is the point: it show
 | 2026-09-27 | R-06               | silent on a choice that repeats the ingredient name | the repetition is dropped from `variant`, since `name` holds it | case 005, `cerises confites maisons ou cerises à l’eau de vie` |
 | 2026-09-27 | Q-06               | ligatures only | ligatures and typographic apostrophes | case 005 writes `l’eau de vie` with a typographic apostrophe; copying it as `'` created a difference that is typographic, not a content error |
 | 2026-09-27 | §9                 | R-05 counted on 005; R-08 without 005 | R-05 3/10 (002, 007, 009); R-08 3/10 (003, 004, 005) | annotating case 005: its only `ou` line names cherries on both sides, which is R-06, and `40 cl` is converted under R-08 |
-
+| 2026-09-27 | §2, R-10 | "every name is singular", unqualified | the plural of what is bought is removed; the plural of what the product is made of stays | case 008, `jus de cranberries`: 40 ml of juice is bought, no cranberry is counted. Singularising it would rename a product. Residual: `jus de cranberry` and `jus de cranberries` give two names, reconciled downstream by catalogue matching (§1) |
 
 ## 9. Rule coverage on the case set
 
