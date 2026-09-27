@@ -160,8 +160,7 @@
     {
       "line": "4 tomates (en conserve hors saison)",
       "rules": [
-        "R-06",
-        "I-03"
+        "R-06"
       ],
       "note": "Conditional qualifier: canned out of season is another product at another price. The page does not decide, so needs_manager_choice is true without any 'ou' (hand-annotated, I-03 checks one direction only)."
     },
