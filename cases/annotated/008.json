@@ -1,0 +1,39 @@
+{
+    "case": "008",
+    "annotated_at": "2026-09-27",
+    "spec_commit": "ea2cf7e",
+    "expected": {
+        "servings": 1,
+        "prep_time_minutes": 5,
+        "cook_time_minutes": 0,
+        "ingredients": [
+            { "name": "vodka", "quantity": 30,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "jus d'ananas", "quantity": 40,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "jus de cranberries", "quantity": 40,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "crème de mûre", "quantity": 20,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false },
+            { "name": "sirop de melon", "quantity": 20,"unit": "ml","unit_is_metric": true,"preparation": null,"variant": null,"alternative": null,"component": null,"needs_manager_choice": false }
+        ],
+        "instructions": [
+            { "position": 1, "text": "Dans un shaker rempli de glaçons, verser tous les alcools puis compléter avec les jus de fruits." },
+            { "position": 2, "text": "Shaker pendant 2-3 minutes, jusqu'à ce que les glaçons disparaissent." },
+            { "position": 3, "text": "Servir dans un grand verre à cocktail, type \"verre tulipe\"." }
+        ]
+    },
+    "decisions": [
+        {
+            "line": "1 verre",
+            "rules": ["R-12"],
+            "note": "Yield in glasses: 'verre' is in R-12's closed list, since a cocktail is sold by the glass, so servings is 1."
+        },
+        {
+            "line": "Cuisson : -",
+            "rules": ["R-09"],
+            "note": "No cooking: the header writes '-' and the JSON-LD writes PT0S for the same page, so the value is 0, not null (Q-07)."
+        },
+        {
+            "line": "3 cl de vodka, 4 cl de jus d'ananas, 4 cl de jus de cranberries, 2 cl de crème de mûre, 2 cl de sirop de melon",
+            "rules": ["R-08"],
+            "note": "Every volume converted from centilitres to millilitres. Names are kept as sold: 'jus de cranberries' keeps its plural, since juice is what is bought and no cranberry is counted."
+        }
+    ]
+  }
