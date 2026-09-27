@@ -46,9 +46,12 @@ One row per canonical **type**, not per field: two fields sharing a canonical ty
 | Non-metric     | `1 sachet`, `2 cuillères à soupe`                                     | quantity as given, unit verbatim from a closed list                   | R-02             |
 | Countable      | `3 œufs`, `1 citron`                                                  | integer, `unit` null                                                  | R-10             |
 | Name           | `les Œufs`, `3 oeufs`, `Cerises dénoyautées`, `Crème fraîche entière` | bare ingredient, singular, lowercase, no preparation and no qualifier | R-01, R-06, R-10 |
+| Step text      | `"...les saveurs. "` (reference, trailing space), `...les saveurs.` (visible) | verbatim, leading and trailing whitespace removed, nothing else touched | §2               |
 
 
 A composite source can yield a composite canonical value: `500 g de cerises` is one string that becomes `{name, quantity, unit}`. The normalizer therefore also splits, not only converts.
+
+Step text is the one field copied verbatim: spelling mistakes stay (`troncons`), since correcting them would be creating content. Only the surrounding whitespace is removed, on both sides: the JSON-LD ends steps with a space the visible text does not carry (case 002), and keeping it would fail every step for a reason that has nothing to do with the model.
 
 *Presentation form, what the report prints, only needs a decision where a bare number could be misread. Otherwise the report shows canonical value + unit.*
 
@@ -89,7 +92,7 @@ A field exists only if it has a verification route: comparable to the reference,
 | `variant`              | string \| null  | reference                           |
 | `alternative`          | string \| null  | hand-annotated                      |
 | `component`            | string \| null  | hand-annotated (Q-05, resolved)     |
-| `needs_manager_choice` | boolean        | invariant I-03                        |
+| `needs_manager_choice` | boolean        | invariant I-03 when the choice is written with `ou` or sits in `alternative`; hand-annotated otherwise |
 
 
 
@@ -121,14 +124,14 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 - **Decision** — `name` holds the ingredient alone (`cerises`), lowercase. The participle goes to `preparation`, verbatim, lowercase. If there is none, `preparation` is `null`.
 - **Reason** — `name` is matched against a supplier catalogue, which lists `cerises` and never `cerises dénoyautées`. A name that carries the preparation never matches and the ingredient gets no price, so the cost per cover is wrong.
 - **Consequence** — `name` becomes comparable to the reference, which also writes the bare ingredient. `preparation` has no comparable reference; it is hand-annotated on the case set only and excluded from the headline precision and recall.
-- **Boundary with R-06** — both rules detach a word stuck to the name. The test is the price, not the grammar: a preparation state does not change the price per kilo (pitted or not, cherries cost the same), a qualifier does (`épaule` and `tendron` are two catalogue entries). Preparation goes here, qualifier goes to R-06.
-- **Status** — settled. 4/10 cases (002, 003, 005, 006).
+- **Boundary with R-06** — both rules detach a word stuck to the name. The test is the price, not the grammar, and it reads as: **what the cook does in the kitchen** is a preparation, **what you buy** is a qualifier. Cherries are bought whole and pitted in the kitchen, onions are bought whole and sliced: preparation, here. A smoked sausage is bought smoked, `épaule` and `tendron` are two catalogue entries: qualifier, R-06. `fumées` in `saucisses fumées` (case 002) is therefore a qualifier, although it is a past participle.
+- **Status** — settled. 3/10 cases (003, 005, 006).
 
 
 
 ### R-02 — Quantity expressed in a non-metric unit
 
-- **Situation** — the unit in the source is not a mass or a volume. Two families: packaging (`sachet`, `boîte`, `brique`, `bouquet`) and household measures (`cuillère à soupe`, `cuillère à café`, `verre`, `pincée`).
+- **Situation** — the unit in the source is not a mass or a volume. Three families: packaging (`sachet`, `boîte`, `brique`, `bouquet`), household measures (`cuillère à soupe`, `cuillère à café`, `verre`, `pincée`) and natural portions (`gousse`, as in `6 gousses d' ail`, case 002).
 - **Decision** — write the quantity as given and the unit verbatim, singular, from a closed list. Never convert it to grams or millilitres.
 - **Reason** — a tablespoon of sugar weighs about 15 g and one of flour about 10 g: the conversion depends on the ingredient, so any table would be a value the page does not carry. `1 sachet` and `2 cuillères à soupe` are written in the text; extracting them is form, converting them is invention.
 - **Consequence** — carries `unit_is_metric: false`, so the manager sees the line and completes the mass. Excluded from the mass and volume conversion metric, counted in `name` precision and recall.
@@ -148,7 +151,7 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 
 ### R-04 — Parenthetical aside carrying no priceable information
 
-- **Situation** — the parenthesis holds an instruction or a second, unquantified use: `(+ un peu pour le moule)`, `(pour le service)`, `(facultatif)`, `(un peu, pour décorer)`. It does **not** apply when the parenthesis narrows the ingredient itself — see R-06.
+- **Situation** — the parenthesis holds an instruction, a second unquantified use, or an **example rather than a requirement**: `(+ un peu pour le moule)`, `(pour le service)`, `(facultatif)`, `(un peu, pour décorer)`, `(genre diots de Savoie)` (case 002). An example suggests a product without committing the dish to it, whatever the word that introduces it (`genre`, `type`, `par exemple`, `comme`). It does **not** apply when the parenthesis narrows the ingredient itself — see R-06.
 - **Decision** — the parenthesis and its content are removed before parsing. No second record is emitted from the aside.
 - **Reason** — the aside carries no usable quantity, so a second record would be an ingredient with an empty quantity, priced at zero, indistinguishable from a genuine extraction failure.
 - **Consequence** — costs `recall` on a real second use of the ingredient, buys `precision` on `name`. Deliberate: a missing line costs the manager seconds, a phantom line at zero cost falsifies the cost per cover silently. **The stripping runs on both sides of the comparison**, model output and reference alike, since the reference carries the parenthesis too.
@@ -159,8 +162,8 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 ### R-05 — Two ingredients offered as alternatives
 
 - **Situation** — one line offers a choice with `ou`: `1 gousse de vanille ou 1 c. à c. d'extrait`, `beurre ou margarine`.
-- **Decision** — keep the first option as the ingredient. The discarded text goes to `alternative`, verbatim. Never emit two records.
-- **Reason** — the record feeds a cost per cover. Two records make the dish pay for both, no record makes it pay for neither; both are wrong in a way the manager cannot see. The first option is the author's primary, so it is the defensible choice, and `alternative` keeps the information rather than destroying it.
+- **Decision** — keep the first option as the ingredient. The discarded option goes to `alternative`, verbatim, without the separating `ou`, which belongs to neither option. Set `needs_manager_choice: true`. Never emit two records.
+- **Reason** — the record feeds a cost per cover. Two records make the dish pay for both, no record makes it pay for neither; both are wrong in a way the manager cannot see. The first option is the author's primary, so it is the defensible record, and `alternative` keeps the information rather than destroying it. But two options at two prices are a choice the page does not settle, so the governing principle applies: the record flags it for the manager.
 - **Consequence** — applied **on both sides** of the comparison, since the reference carries the full line too. `alternative` has no comparable reference and stays out of the headline metric.
 - **Status** — settled on the decision. 4/10 cases (002, 005, 007, 009). #provisional on the detection only: `ou` also appears inside names, same family of problem as R-03's `et`. See §7, Q-01.
 
@@ -168,13 +171,13 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 
 ### R-06 — Qualifier narrowing the ingredient itself
 
-- **Situation** — a word attached to the ingredient name specifies a cut, a grade, a fat content or a variety, and therefore changes which catalogue entry is priced. **The punctuation is not the situation.** It appears in two shapes: with parentheses, `veau (épaule ou tendron)`, `farine (T55)`; and with none at all, `crème fraîche entière`, `lait demi-écrémé`.
-- **Decision** — `name` stays the bare ingredient. The qualifier goes to `variant`, **verbatim, case preserved**, parentheses removed. When the qualifier itself offers a choice with `ou`, set `needs_manager_choice: true` and do **not** pick one.
+- **Situation** — a word attached to the ingredient name specifies a cut, a grade, a fat content or a variety, and therefore changes which catalogue entry is priced. **The punctuation is not the situation.** It appears in two shapes: with parentheses, `veau (épaule ou tendron)`, `farine (T55)`, `tomates (en conserve hors saison)`; and with none at all, `crème fraîche entière`, `lait demi-écrémé`, `saucisses fumées`. A qualifier can be conditional: `en conserve hors saison` names another product for part of the year.
+- **Decision** — `name` stays the bare ingredient, where the bare ingredient is the product **as the catalogue sells it**: `huile d'olive`, `piment oiseau`, `crème fraîche` stay whole (see §7, Q-08). The qualifier goes to `variant`, **verbatim, case preserved**, parentheses removed. When the qualifier offers a choice between products at different prices, **with or without the word `ou`**, set `needs_manager_choice: true` and do **not** pick one.
 - **Why the case is preserved, unlike** `name` — a qualifier is often a standardised designation: `T55`, `AOP`, `IGP`, `demi-sel`. Lowercasing turns `T55` into `t55` and destroys the designation. `name` is lowercased because it is a common noun used as a catalogue key; `variant` is not.
 - **Reason** — shoulder and tendron are two catalogue entries at two different prices per kilo, and whole cream is not the same product as light cream. Dropping the qualifier prices the wrong item; picking one arbitrarily prices something the page never committed to. The only honest record says "the page does not decide, a human must".
-- **Boundary with R-01** — the test is whether the word changes the price per kilo, not whether it is a participle or an adjective.
-- **Consequence** — `variant` is compared to the reference, which carries the string. The comparison is case-sensitive, which costs precision when a page capitalises inconsistently; that cost is accepted and measured rather than hidden behind a lowercasing that would corrupt designations. `needs_manager_choice` is a flag, checkable by invariant I-03, and not a metric. These lines are excluded from any automated cost total. Detecting a qualifier with no punctuation is strictly harder than finding a parenthesis: that difficulty is now inside the rule rather than hidden outside it, and it will show as lower `variant` precision rather than as a silently missing field.
-- **Status** — #provisional. The unparenthesised form was observed on a real page (`Crème fraîche entière`, case 005); the parenthesised form fired 0/10. The list of qualifier families is to be closed against 30 pages.
+- **Boundary with R-01** — what you buy is a qualifier, what the cook does in the kitchen is a preparation; the grammar of the word does not decide.
+- **Consequence** — `variant` is compared to the reference, which carries the string. The comparison is case-sensitive, which costs precision when a page capitalises inconsistently; that cost is accepted and measured rather than hidden behind a lowercasing that would corrupt designations. `needs_manager_choice` is a flag, not a metric; I-03 checks it mechanically only when the choice is written with `ou`, the rest is hand-annotated. These lines are excluded from any automated cost total. Detecting a qualifier with no punctuation is strictly harder than finding a parenthesis: that difficulty is now inside the rule rather than hidden outside it, and it will show as lower `variant` precision rather than as a silently missing field.
+- **Status** — #provisional. 2/10 cases: the unparenthesised form on 002 (`saucisses fumées`) and 005 (`Crème fraîche entière`), the parenthesised and conditional form on 002 (`tomates (en conserve hors saison)`). The list of qualifier families is to be closed against 30 pages.
 
 
 
@@ -248,7 +251,7 @@ Checks a verifier runs on the produced record. **These are not schema fields** �
 | ---- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | I-01 | Every ingredient named in the steps appears in the ingredient list, as `name` or as `alternative`.                           | No                   |
 | I-02 | `unit_is_metric` is true if and only if `unit` is `"g"` or `"ml"`.                                                           | No                   |
-| I-03 | `needs_manager_choice` is true if and only if `variant` is non-null and contains the token `ou` between two spaces.          | No                   |
+| I-03 | If `variant` contains the token `ou` between two spaces, or `alternative` is non-null, then `needs_manager_choice` is true.  | No                   |
 | I-04 | A non-null `unit` implies a non-null `quantity`.                                                                             | No                   |
 | I-05 | Every rule ID cited anywhere in this file exists as a heading in §4.                                                         | No                   |
 | I-06 | `position` on the instructions runs 1..n with no gap and no repeat.                                                          | No                   |
@@ -257,9 +260,11 @@ Checks a verifier runs on the produced record. **These are not schema fields** �
 | I-09 | Two records sharing the same `name` are flagged, never merged.                                                               | No                   |
 
 
-I-01 is **#provisional**, and for two reasons found while checking it against the rules. It used to say "and the reverse", which fires on almost every recipe: salt and pepper are listed and never named in the steps. That half is dropped until the false-positive rate is measured. It also used to compare the steps against `name` alone, which made it contradict R-05: the discarded alternative sits in `alternative`, so a step naming it was reported as an incoherence on a record that was correct. An invariant that accuses a rule is the invariant that is wrong.
+I-01 is **#provisional**, and for two reasons found while checking it against the rules. It used to say "and the reverse", which fires on almost every recipe: salt and pepper are listed and never named in the steps. That half is dropped until the false-positive rate is measured. It also used to compare the steps against `name` alone, which made it contradict R-05: the discarded alternative sits in `alternative`, so a step naming it was reported as an incoherence on a record that was correct. An invariant that accuses a rule is the invariant that is wrong. A further false positive, case 002: the last step reads `Servez avec du riz thai`, a serving suggestion; `riz` is named in the steps and absent from the list, correctly.
 
 I-03 used to read "if and only if `variant` offers a choice". "Offers a choice" is not applicable by a machine without a definition, so it was not an invariant, it was an instruction to a human. The token test is mechanical. It misses a qualifier where `ou` is glued to a word, which is the residual risk already recorded as Q-01.
+
+I-03 was then an equivalence, and case 002 broke it: `tomates (en conserve hors saison)` offers a choice between two products at two prices without the word `ou`. R-06 read as meaning asked for the flag, I-03 refused it. The invariant now checks one direction only, the one a machine can decide: a written `ou` or a filled `alternative` without the flag is an error. A flag without either signal is allowed, and is hand-annotated. An invariant that accuses a correct record is the invariant that is wrong, as with I-01.
 
 I-05 is a check on the spec, not on a record. It is the invariant that would have caught the dead cross-references of 2026-09-24.
 
@@ -278,6 +283,10 @@ Derived from the rules, not invented. Each rule describes a situation; that situ
 | ------------------------------------------------------------------------------------- | -------------- | ----------------- | ---------------------------------------------------------------------------- |
 | `Crème fraîche entière`                                                               | real, case 005 | R-06              | `name: "crème fraîche"`, `variant: "entière"`, `needs_manager_choice: false` |
 | `1 verre` as the yield of a cocktail                                                     | real, case 008 | R-12              | `servings: 1`                                                                |
+| `4 tomates (en conserve hors saison)`                                                    | real, case 002 | R-06, I-03        | `name: "tomate"`, `variant: "en conserve hors saison"`, `needs_manager_choice: true` without any `ou` |
+| `6 saucisses fumées (genre diots de Savoie) ou 4 grosses saucisses fumées type Montbéliard` | real, case 002 | R-05, R-04, R-06, R-10 | `name: "saucisse"`, `quantity: 6`, `variant: "fumées"`, example stripped, `alternative: "4 grosses saucisses fumées type Montbéliard"`, `needs_manager_choice: true` |
+| `6 gousses d' ail`                                                                       | real, case 002 | R-02              | `name: "ail"`, `quantity: 6`, `unit: "gousse"`                            |
+| `1 piment oiseau (facultatif)`, `huile d'olive`                                          | real, case 002 | R-04, R-06, R-07  | names stay whole as sold: `piment oiseau`, `huile d'olive`                  |
 | `Préparation : 20 min`                                                                 | real, case 001 | R-09              | `20`                                                                         |
 | `Cuisson : 1h`                                                                         | real, cases 001, 010 | R-09        | `60`                                                                         |
 | `Temps total : 1h20`                                                                   | real, case 001 | R-09, I-08        | `80`, equals `20` + `60`, no flag                                            |
@@ -292,7 +301,7 @@ Derived from the rules, not invented. Each rule describes a situation; that situ
 | `500 g de cerises dénoyautées`                                                        | constructed    | R-01              | `name: "cerises"`, `preparation: "dénoyautées"`                              |
 | `2 cuillères à soupe de sucre`                                                        | constructed    | R-02              | `quantity: 2`, `unit: "cuillère à soupe"`, `unit_is_metric: false`           |
 | `sel, poivre`                                                                         | constructed    | R-03              | two records, both with `quantity: null`                                      |
-| `1 gousse de vanille ou 1 c. à c. d'extrait`                                          | constructed    | R-05              | one record on vanilla, `alternative` holds the rest                          |
+| `1 gousse de vanille ou 1 c. à c. d'extrait`                                          | constructed    | R-05              | one record on vanilla, `alternative: "1 c. à c. d'extrait"` without `ou`, `needs_manager_choice: true` |
 | `800 g de veau (épaule ou tendron)`                                                   | constructed    | R-06              | `variant: "épaule ou tendron"`, `needs_manager_choice: true`                 |
 | `1,5 kg de pommes de terre`                                                           | constructed    | R-08              | `quantity: 1500`, `unit: "g"`                                                |
 | `une heure de repos`                                                                  | constructed    | R-09              | `null`, not `60`                                                             |
@@ -317,6 +326,8 @@ Decisions I could not settle alone, or that would belong to a domain expert in a
 | Q-05 | Does the JSON-LD carry the component headings, or do they exist only in the visible text?           | (a) the reference carries them, `component` is comparable; (b) visible text only, `component` is hand-annotated | **(b), resolved 2026-09-26**   | Case 007: the page shows `Pour la pâte :` and `Pour la farce :`, the JSON-LD `recipeIngredient` is one flat array. schema.org types `recipeIngredient` as a list of text with no grouping, so no JSON-LD page can carry the headings. |
 | Q-06 | Is `œuf` against `oeuf` the only ligature pair, or is there a wider accent and ligature problem?    | (a) normalize ligatures only; (b) full Unicode normalization on both sides                                      | (b)                            | One occurrence found so far. A sweep on 30 pages will say.                                                                                                     |
 | Q-07 | When the page shows `Cuisson : -`, how does the JSON-LD write the cooking time?                   | (a) `-` becomes `null`, and `PT0S` is mapped to `null` too; (b) `-` becomes `0`, like `PT0S` | **(b), resolved 2026-09-26**   | The JSON-LD writes `PT0S` on all three no-cook cases (004, 006, 008): the page states a zero. (a) would erase a stated value on the reference side to match an extraction choice. |
+| Q-08 | Where does the ingredient name end and the qualifier begin? `huile d'olive`, `piment oiseau` against `crème fraîche entière` | (a) the name is the product as the catalogue sells it; (b) every narrowing word goes to `variant` | (a)                            | (b) would give `huile` + `d'olive`, a key no catalogue lists. (a) has no mechanical criterion: it relies on knowing the catalogue, which the client owns. To confirm against the real supplier catalogue. |
+| Q-09 | A parenthesis names another ingredient, without `ou`: `curcuma (safran)` (case 002). Synonym or second ingredient? | (a) keep it in `variant`; (b) keep it in `alternative`, flagged; (c) strip it as an aside (R-04) | (c), provisional               | The page does not say. Reading `safran` as a synonym of `curcuma` uses knowledge the text does not carry, which §1 forbids. (a) could make the platform price saffron. Case 002 is annotated under (c) and marked open. |
 
 
 
@@ -356,6 +367,13 @@ Rules changed after seeing real data. Keeping this visible is the point: it show
 | 2026-09-27 | cases 001 to 010 | captured without the yield | the yield line restored in every `input.txt` under `Ingrédients`, as the page writes it (`4 personnes`, `1 verre`) | annotating case 002: the JSON-LD says `4 personnes`, the input said nothing, so the extractor was forced to `null` on a field the reference fills. Same capture gap as the durations |
 | 2026-09-27 | R-12, §2 | yield unit unstated; `servings` assumed to count persons | R-12 added: closed list `personne`, `verre`; any other unit becomes `null` | case 008, a cocktail, states its yield as `1 verre`. Two annotators could write `1` or `null`, which is the definition of a missing rule |
 | 2026-09-27 | split | `cases/split.json` rationale: case 008 fires no rule at all | case 008 fires R-09 and R-12; the split is frozen and not reshuffled | the rationale was written against the coverage table of 2026-09-25. Since then R-09 was counted on all ten cases and R-12 was added on 008. Consequence for the split: R-12 is dev only, one occurrence |
+| 2026-09-27 | R-01, R-06 | boundary stated as "a preparation state does not change the price per kilo" | what the cook does in the kitchen is a preparation, what you buy is a qualifier | case 002, `saucisses fumées`: a past participle that changes the product bought. Filed under `preparation`, the platform would price a fresh sausage |
+| 2026-09-27 | R-06, I-03, §3 | choice flagged only when the qualifier holds `ou`; I-03 an equivalence | a choice between products at different prices is flagged with or without `ou`; I-03 checks one direction; the rest is hand-annotated | case 002, `tomates (en conserve hors saison)`: canned and fresh are two prices, the page does not decide, and I-03 refused the flag |
+| 2026-09-27 | R-05, I-03 | the first option recorded, no flag; `alternative` "verbatim" | `needs_manager_choice: true` whenever `alternative` is filled; the separating `ou` is not kept | case 002, `6 saucisses fumées ... ou 4 grosses saucisses fumées`: two options at two prices, the same unsettled choice as the tomatoes |
+| 2026-09-27 | R-04 | asides listed as instructions and second uses | an example rather than a requirement is an aside, whatever word introduces it | case 002, `(genre diots de Savoie)` |
+| 2026-09-27 | R-02 | two families, no natural portions | `gousse` added | case 002, `6 gousses d' ail`; §6 already expected `unit: "gousse"` from a unit the list did not contain |
+| 2026-09-27 | §2 | step text normalization unstated | verbatim, surrounding whitespace removed on both sides | case 002: the JSON-LD ends every step with a space the visible text does not carry |
+| 2026-09-27 | §9 | R-01 counted on 002; R-06 1/10 with the parenthesised form at 0 | R-01 3/10 without 002; R-06 2/10, parenthesised form observed | annotating case 002: its only R-01 candidate, `fumées`, is a qualifier under the new boundary |
 
 
 ## 9. Rule coverage on the case set
@@ -365,12 +383,12 @@ How often each rule fires on the 10 captured cases. A score is only readable nex
 
 | Rule | Cases where it fires                | Count | Status                                |
 | ---- | ----------------------------------- | ----- | ------------------------------------- |
-| R-01 | 002, 003, 005, 006                  | 4/10  | settled                               |
+| R-01 | 003, 005, 006                       | 3/10  | settled                               |
 | R-02 | 001 to 007, 009, 010                | 9/10  | settled                               |
 | R-03 | none                                | 0/10  | #unobserved, excluded from the metric |
 | R-04 | 002, 009, 010                       | 3/10  | settled                               |
 | R-05 | 002, 005, 007, 009                  | 4/10  | settled                               |
-| R-06 | unparenthesised form only, case 005 | 1/10  | #provisional                          |
+| R-06 | 002, 005                            | 2/10  | #provisional                          |
 | R-07 | 001, 002, 005, 009                  | 4/10  | settled                               |
 | R-08 | 003, 004                            | 2/10  | settled                               |
 | R-09 | all ten                             | 10/10 | settled                               |
@@ -380,5 +398,7 @@ How often each rule fires on the 10 captured cases. A score is only readable nex
 
 
 **Eleven of the twelve rules fire at least once on these ten cases. R-03 fires zero times and is excluded from the metric.** An earlier wording of this paragraph claimed ten out of eleven while R-11's count was still unknown: a figure asserted beyond its own data, in the project whose subject is precisely that. R-11 has since been counted on case 007, which made the claim true; R-12, added on case 008, brings it to eleven of twelve. The episode is recorded rather than quietly erased.
+
+The `coverage` and `known_gaps` fields of `cases/split.json` are a snapshot taken at the freeze of 2026-09-25 and are never edited. The current coverage is this table; changes since the freeze are in §8.
 
 Any figure published in `Results` carries this table, its denominator per field, and the exclusions declared in §4.
