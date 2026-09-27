@@ -1,0 +1,203 @@
+{
+  "case": "002",
+  "annotated_at": "2026-09-27",
+  "spec_commit": "90aa2b8",
+  "expected": {
+    "servings": 4,
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 20,
+    "ingredients": [
+      {
+        "name": "huile d'olive",
+        "quantity": null,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "sel",
+        "quantity": null,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "poivre",
+        "quantity": null,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "oignon",
+        "quantity": 4,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "thym",
+        "quantity": null,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "tomate",
+        "quantity": 4,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": "en conserve hors saison",
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": true
+      },
+      {
+        "name": "piment oiseau",
+        "quantity": 1,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "saucisse",
+        "quantity": 6,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": "fumées",
+        "alternative": "4 grosses saucisses fumées type Montbéliard",
+        "component": null,
+        "needs_manager_choice": true
+      },
+      {
+        "name": "ail",
+        "quantity": 6,
+        "unit": "gousse",
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "laurier",
+        "quantity": null,
+        "unit": null,
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      },
+      {
+        "name": "curcuma",
+        "quantity": 1,
+        "unit": "cuillère à café",
+        "unit_is_metric": false,
+        "preparation": null,
+        "variant": null,
+        "alternative": null,
+        "component": null,
+        "needs_manager_choice": false
+      }
+    ],
+    "instructions": [
+      {
+        "position": 1,
+        "text": "Piquez les saucisses et mettez les dans l'eau bouillante pendant 10 mn, dans la même marmite qui vous servira à la préparation du plat afin de garder les saveurs."
+      },
+      {
+        "position": 2,
+        "text": "Videz la marmite. Réservez les saucisses. Faites-y chauffer de l'huile d'olive."
+      },
+      {
+        "position": 3,
+        "text": "Faites revenir les oignons émincés et l'ail écrasé sans qu'ils soient trop colorés."
+      },
+      {
+        "position": 4,
+        "text": "Coupez les saucisses en troncons de 1,5 cm puis faites les revenir avec les oignons. Au bout de 5 mn, ajoutez les tomates coupées en petits morceaux et les aromates (le piment en morceaux)."
+      },
+      {
+        "position": 5,
+        "text": "Mélangez le tout puis laisser mijoter sur feu doux en ôtant le couvercle de temps à autre pour éliminer l'excès d'eau."
+      },
+      {
+        "position": 6,
+        "text": "Servez avec du riz thai"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "line": "4 tomates (en conserve hors saison)",
+      "rules": [
+        "R-06",
+        "I-03"
+      ],
+      "note": "Conditional qualifier: canned out of season is another product at another price. The page does not decide, so needs_manager_choice is true without any 'ou' (hand-annotated, I-03 checks one direction only)."
+    },
+    {
+      "line": "6 saucisses fumées (genre diots de Savoie) ou 4 grosses saucisses fumées type Montbéliard",
+      "rules": [
+        "R-05",
+        "R-04",
+        "R-06",
+        "R-10"
+      ],
+      "note": "R-05: first option kept, second in alternative without the separating 'ou', flag set. '(genre diots de Savoie)' is an example, an aside under R-04. 'fumées' is what you buy, a qualifier under R-06. Singular name under R-10."
+    },
+    {
+      "line": "huile d'olive; 1 piment oiseau (facultatif)",
+      "rules": [
+        "R-06",
+        "R-04",
+        "R-07",
+        "R-10"
+      ],
+      "note": "Names stay whole as the catalogue sells them (Q-08, provisional). '(facultatif)' is an aside under R-04."
+    },
+    {
+      "line": "6 gousses d' ail",
+      "rules": [
+        "R-02"
+      ],
+      "note": "'gousse' is a natural portion unit, in R-02's closed list."
+    },
+    {
+      "line": "1 cuillère à café de curcuma (safran)",
+      "rules": [
+        "R-02"
+      ],
+      "note": "OPEN, Q-09: the page does not say whether 'safran' is a synonym or another ingredient. Annotated under the provisional choice (c), parenthesis stripped. Revisit when Q-09 is settled."
+    }
+  ]
+}
