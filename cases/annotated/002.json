@@ -194,7 +194,7 @@
     {
       "line": "1 cuillère à café de curcuma (safran)",
       "rules": [
-        "R-02"
+        "R-02", "R-04"
       ],
       "note": "OPEN, Q-09: the page does not say whether 'safran' is a synonym or another ingredient. Annotated under the provisional choice (c), parenthesis stripped. Revisit when Q-09 is settled."
     }
