@@ -1,9 +1,12 @@
 import json
+from pathlib import Path
 
 import pytest
 from pydantic import ValidationError
 
 from task.schema import Ingredient, Recipe
+
+ANNOTATED = sorted(Path("cases/annotated").glob("*.json"))
 
 
 def validate(data: dict) -> Recipe:
@@ -100,3 +103,10 @@ def test_unknown_key_is_rejected(valid_recipe_data):
     valid_recipe_data["ingredients"][0]["notes"] = "organic"
     with pytest.raises(ValidationError, match="Extra inputs"):
         validate(valid_recipe_data)
+
+
+@pytest.mark.parametrize("case_file", ANNOTATED, ids=lambda p: p.stem)
+def test_annotation_matches_schema(case_file):
+    data = json.loads(case_file.read_text(encoding="utf-8"))
+    assert data["case"] == case_file.stem, "file name and 'case' field disagree"
+    validate(data["expected"])
