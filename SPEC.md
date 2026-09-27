@@ -43,8 +43,8 @@ One row per canonical **type**, not per field: two fields sharing a canonical ty
 | Yield          | `4 personnes`, `8 Personnes`, `1 verre`                                              | integer; a unit outside R-12's closed list becomes `null`               | R-12             |
 | Mass           | `500 g`, `1 kg`, `1,5 kg`                                                            | decimal, grams                                                          | R-08             |
 | Volume         | `25 cl`, `0,25 l`, `250 ml`                                                          | decimal, millilitres                                                    | R-08             |
-| Non-metric     | `1 sachet`, `2 cuillères à soupe`                                                    | quantity as given, unit verbatim from a closed list                     | R-02             |
-| Countable      | `3 œufs`, `1 citron`                                                                 | integer, `unit` null                                                    | R-10             |
+| Non-metric     | `1 sachet`, `2 cuillères à soupe`, `1 cube`, `2 feuilles`, `1 cuillère à café rase`  | quantity as given, unit verbatim from a closed list; a modifier of the measure (`rase`) dropped | R-02             |
+| Countable      | `3 œufs`, `1 citron`, `4 cuisses de poulet`                                          | integer, `unit` null                                                    | R-10             |
 | Name           | `les Œufs`, `3 oeufs`, `Cerises dénoyautées`, `Crème fraîche entière`                | bare ingredient, lowercase, no preparation and no qualifier; the plural of what is bought is removed (`œufs` → `œuf`), the plural of what the product is made of stays (`jus de cranberries`)   | R-01, R-06, R-10 |
 | Step text      | `"...les saveurs. "` (reference, trailing space), `...les saveurs.` (visible)        | verbatim, leading and trailing whitespace removed, nothing else touched | §2               |
 
@@ -131,11 +131,11 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 
 ### R-02 — Quantity expressed in a non-metric unit
 
-- **Situation** — the unit in the source is not a mass or a volume. Three families: packaging (`sachet`, `boîte`, `brique`, `bouquet`), household measures (`cuillère à soupe`, `cuillère à café`, `verre`, `pincée`) and natural portions (`gousse`, as in `6 gousses d' ail`, case 002).
-- **Decision** — write the quantity as given and the unit verbatim, singular, from a closed list. Never convert it to grams or millilitres.
+- **Situation** — the unit in the source is not a mass or a volume. Three families: packaging (`sachet`, `boîte`, `brique`, `bouquet`, `cube`, as in `1 cube de bouillon de volaille`, case 010), household measures (`cuillère à soupe`, `cuillère à café`, `verre`, `pincée`) and natural portions of a product priced as a whole (`gousse`, as in `6 gousses d' ail`, case 002; `feuille`, as in `2 feuilles de laurier`, case 010). A cut the catalogue prices on its own is not a portion: `4 cuisses de poulet` is R-10, see §7, Q-10.
+- **Decision** — write the quantity as given and the unit verbatim, singular, from a closed list. Never convert it to grams or millilitres. A word that modifies the measure and not the product (`rase`, in `1 cuillère à café rase`, case 010) is not part of the unit and is not stored: the unit is `cuillère à café`. It changes the amount by a fraction the page does not quantify, the line already carries `unit_is_metric: false` so the manager completes the mass, and keeping it would turn every modifier into a new entry of the closed list checked by I-07.
 - **Reason** — a tablespoon of sugar weighs about 15 g and one of flour about 10 g: the conversion depends on the ingredient, so any table would be a value the page does not carry. `1 sachet` and `2 cuillères à soupe` are written in the text; extracting them is form, converting them is invention.
 - **Consequence** — carries `unit_is_metric: false`, so the manager sees the line and completes the mass. Excluded from the mass and volume conversion metric, counted in `name` precision and recall.
-- **Status** — settled. 9/10 cases (001 to 007, 009, 010), the most frequent rule of the set.
+- **Status** — settled on the decision. 9/10 cases (001 to 007, 009, 010), the most frequent rule of the set. #provisional on the natural portions: the boundary with a cut depends on the catalogue, see §7, Q-10.
 
 
 
@@ -178,7 +178,7 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 - **Reason** — shoulder and tendron are two catalogue entries at two different prices per kilo, and whole cream is not the same product as light cream. Dropping the qualifier prices the wrong item; picking one arbitrarily prices something the page never committed to. The only honest record says "the page does not decide, a human must".
 - **Boundary with R-01** — what you buy is a qualifier, what the cook does in the kitchen is a preparation; the grammar of the word does not decide.
 - **Consequence** — `variant` is compared to the reference, which carries the string. The comparison is case-sensitive, which costs precision when a page capitalises inconsistently; that cost is accepted and measured rather than hidden behind a lowercasing that would corrupt designations. `needs_manager_choice` is a flag, not a metric; I-03 checks it mechanically only when the choice is written with `ou`, the rest is hand-annotated. These lines are excluded from any automated cost total. Detecting a qualifier with no punctuation is strictly harder than finding a parenthesis: that difficulty is now inside the rule rather than hidden outside it, and it will show as lower `variant` precision rather than as a silently missing field.
-- **Status** — #provisional. 3/10 cases: the unparenthesised form on 002 (`saucisses fumées`), 003 (`beurre semi-sel`, `cerises fraîches ou surgelées`) and 005 (`Crème fraîche entière`, `cerises confites maisons ou cerises à l’eau de vie`); the parenthesised and conditional form on 002 (`tomates (en conserve hors saison)`). The list of qualifier families is to be closed against 30 pages.
+- **Status** — #provisional. 4/10 cases: the unparenthesised form on 002 (`saucisses fumées`), 003 (`beurre semi-sel`, `cerises fraîches ou surgelées`), 005 (`Crème fraîche entière`, `cerises confites maisons ou cerises à l’eau de vie`) and 010 (`riz parfumé`, `vinaigre d'alcool coloré`); the parenthesised and conditional form on 002 (`tomates (en conserve hors saison)`). The list of qualifier families is to be closed against 30 pages.
 
 
 
@@ -198,7 +198,7 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 - **Decision** — mass is written in grams, volume in millilitres, as a decimal with the comma replaced by a point. `1 kg` becomes `1000`, `25 cl` becomes `250`, `0,25 l` becomes `250`. `unit` holds `"g"` or `"ml"`.
 - **Reason** — the supplier catalogue prices per gram and per millilitre, so the cost per cover is computed in those units. Two records holding the same quantity in different units cannot be summed, and cannot be compared to each other by the comparator.
 - **Consequence** — this is the one conversion the system is allowed to perform, because the factor is fixed by the unit and not by the ingredient. It runs on both sides of the comparison. A mistake here is invisible by a factor of 1000, which is why the normalizer's unit tests carry one case per accepted source form.
-- **Status** — settled. Observed on cases 003, 004 and 005, which carry `cl` and `ml`. The list of accepted source units stays open until 30 pages have been read.
+- **Status** — settled. Observed on cases 003, 004, 005 and 008, which carry `cl` and `ml`. The list of accepted source units stays open until 30 pages have been read.
 
 
 
@@ -214,8 +214,8 @@ A rule is needed wherever two careful annotators, reading the same text, could l
 
 ### R-10 — Countable ingredient with no unit word
 
-- **Situation** — the line gives a count and an ingredient, with no unit word at all: `3 œufs`, `1 citron`, `4 merguez`. This is **not** R-02: in `2 gousses d'ail` the word `gousses` is present in the text and is a unit, so it goes to R-02's closed list. The discriminator is whether a unit word is written.
-- **Decision** — `quantity` holds the count, `unit` is `null`, and `unit_is_metric` is `false`. `name` is the ingredient in the singular (`œuf`, `citron`), so that three eggs and one egg carry the same name.
+- **Situation** — the line gives a count and an ingredient, with no unit word at all: `3 œufs`, `1 citron`, `4 merguez`. This is **not** R-02: in `2 gousses d'ail` the word `gousses` is present in the text and is a unit, so it goes to R-02's closed list. The discriminator is whether a unit word is written. A word is a unit word only if it belongs to R-02's closed list: `cuisse` in `4 cuisses de poulet` (case 010) is not one, so the line is R-10 and `name` is `cuisse de poulet`.
+- **Decision** — `quantity` holds the count, `unit` is `null`, and `unit_is_metric` is `false`. `name` is the ingredient in the singular (`œuf`, `citron`), so that three eggs and one egg carry the same name. The plural removed is the plural of what is bought; the plural of what the product is made of stays (`jus de cranberries`, case 008), see §2.
 - **Reason** — the page states a count and no unit, so writing `"pièce"` or `"unité"` would add a word the source does not contain, and writing `60 g` for an egg would be the conversion table R-02 already refuses. The singular is what the catalogue lists, and it keeps `name` comparable across recipes.
 - **Consequence** — these lines cannot be priced per gram, so they carry the same flag as R-02 and are excluded from the mass and volume conversion metric. The singularisation is a normalization applied **on both sides**: the reference writes the plural too. It also creates a failure mode of its own, an irregular plural silently mis-singularised, which is why the normalizer keeps an explicit exception list rather than stripping a final `s`.
 - **Status** — settled on the decision. 9/10 cases (all but 008). #provisional on the singularisation: the irregular-plural exception list is still empty. See §7, Q-04.
@@ -324,6 +324,11 @@ Derived from the rules, not invented. Each rule describes a situation; that situ
 | `2 gousses d'ail`                                                                                              | constructed               | R-10 against R-02      | R-02 wins: `unit: "gousse"`, a unit word is written                                                                                                                  |
 | `200 g de farine` under `Pour la pâte` and `50 g de farine` under `Pour la garniture`                          | constructed               | R-11, I-09             | two records, `component` set, no sum, duplicate flagged                                                                                                              |
 | `1 cuillère à café de sel` under `Pour la pâte :` and `3 cuillères à soupe de sel fin` under `Pour la farce :` | real, case 007            | R-11                   | two records, `component: "pâte"` and `component: "farce"`, never summed                                                                                              |
+| `jus de cranberries`                                                                                           | real, case 008            | R-10, §2               | `name: "jus de cranberries"`: the plural of what the product is made of stays                                                                                        |
+| `2 feuilles de laurier`                                                                                        | real, case 010            | R-02, Q-10             | `name: "laurier"`, `quantity: 2`, `unit: "feuille"`                                                                                                                  |
+| `4 cuisses de poulet`                                                                                          | real, case 010            | R-10 against R-02, Q-10 | `name: "cuisse de poulet"`, `quantity: 4`, `unit: null`: a cut, not a portion                                                                                       |
+| `1 cuillère à café rase de gingembre`                                                                          | real, case 010            | R-02                   | `unit: "cuillère à café"`, `rase` not stored                                                                                                                         |
+| `1 cube de bouillon de volaille`                                                                               | real, case 010            | R-02                   | `name: "bouillon de volaille"`, `quantity: 1`, `unit: "cube"`                                                                                                        |
 
 
 **Counter-example check.** For each rule, find one real recipe that the rule would wrongly reject. If you find one, the rule is wrong, not the data.
@@ -344,6 +349,7 @@ Decisions I could not settle alone, or that would belong to a domain expert in a
 | Q-07 | When the page shows `Cuisson : -`, how does the JSON-LD write the cooking time?                                              | (a) `-` becomes `null`, and `PT0S` is mapped to `null` too; (b) `-` becomes `0`, like `PT0S`                    | **(b), resolved 2026-09-26**   | The JSON-LD writes `PT0S` on all three no-cook cases (004, 006, 008): the page states a zero. (a) would erase a stated value on the reference side to match an extraction choice.                                                     |
 | Q-08 | Where does the ingredient name end and the qualifier begin? `huile d'olive`, `piment oiseau` against `crème fraîche entière` | (a) the name is the product as the catalogue sells it; (b) every narrowing word goes to `variant`               | (a)                            | (b) would give `huile` + `d'olive`, a key no catalogue lists. (a) has no mechanical criterion: it relies on knowing the catalogue, which the client owns. To confirm against the real supplier catalogue.                             |
 | Q-09 | A parenthesis names another ingredient, without `ou`: `curcuma (safran)` (case 002). Synonym or second ingredient?           | (a) keep it in `variant`; (b) keep it in `alternative`, flagged; (c) strip it as an aside (R-04)                | (c), provisional               | The page does not say. Reading `safran` as a synonym of `curcuma` uses knowledge the text does not carry, which §1 forbids. (a) could make the platform price saffron. Case 002 is annotated under (c) and marked open.               |
+| Q-10 | A count word sits between the number and `de` + ingredient: `2 feuilles de laurier`, `4 cuisses de poulet` (case 010). Unit of R-02, or part of the name? | (a) always a unit (`laurier` + `feuille`, `poulet` + `cuisse`); (b) always part of the name; (c) a unit when the word is a portion of a product priced as a whole (`gousse`, `feuille`), part of the name when it is a cut the catalogue prices on its own (`cuisse de poulet`) | (c) | Both lines have the same shape; only the catalogue says whether `cuisse de poulet` and `poulet` are two entries. Same dependency as Q-08. To confirm against the real supplier catalogue. |
 
 
 
@@ -399,6 +405,11 @@ Rules changed after seeing real data. Keeping this visible is the point: it show
 | 2026-09-27 | Q-06               | ligatures only | ligatures and typographic apostrophes | case 005 writes `l’eau de vie` with a typographic apostrophe; copying it as `'` created a difference that is typographic, not a content error |
 | 2026-09-27 | §9                 | R-05 counted on 005; R-08 without 005 | R-05 3/10 (002, 007, 009); R-08 3/10 (003, 004, 005) | annotating case 005: its only `ou` line names cherries on both sides, which is R-06, and `40 cl` is converted under R-08 |
 | 2026-09-27 | §2, R-10 | "every name is singular", unqualified | the plural of what is bought is removed; the plural of what the product is made of stays | case 008, `jus de cranberries`: 40 ml of juice is bought, no cranberry is counted. Singularising it would rename a product. Residual: `jus de cranberry` and `jus de cranberries` give two names, reconciled downstream by catalogue matching (§1) |
+| 2026-09-27 | §9                 | R-08 3/10 (003, 004, 005) | R-08 4/10 (003, 004, 005, 008) | annotating case 008: its volumes are converted under R-08 |
+| 2026-09-27 | R-02, R-10, Q-10   | natural portions: `gousse` only; "unit word" in R-10 undefined | `feuille` added as a portion; a cut priced on its own stays in the name; a word is a unit only if it is in R-02's closed list; Q-10 opened | case 010: `2 feuilles de laurier` and `4 cuisses de poulet` have the same shape, and two annotators could split either one |
+| 2026-09-27 | R-02               | packaging: `sachet`, `boîte`, `brique`, `bouquet` | `cube` added | case 010, `1 cube de bouillon de volaille` |
+| 2026-09-27 | R-02               | a modifier of the measure unstated | not part of the unit, not stored | case 010, `1 cuillère à café rase de gingembre`: kept in `unit`, every modifier would become a new entry of the closed list checked by I-07 |
+| 2026-09-27 | §9                 | R-06 3/10 (002, 003, 005) | R-06 4/10 with 010 | annotating case 010: `riz parfumé`, `vinaigre d'alcool coloré` |
 
 ## 9. Rule coverage on the case set
 
@@ -412,9 +423,9 @@ How often each rule fires on the 10 captured cases. A score is only readable nex
 | R-03 | none                 | 0/10  | #unobserved, excluded from the metric |
 | R-04 | 002, 009, 010        | 3/10  | settled                               |
 | R-05 | 002, 007, 009        | 3/10  | settled                               |
-| R-06 | 002, 003, 005        | 3/10  | #provisional                          |
+| R-06 | 002, 003, 005, 010   | 4/10  | #provisional                          |
 | R-07 | 001, 002, 003, 005, 009 | 5/10  | settled                            |
-| R-08 | 003, 004, 005        | 3/10  | settled                               |
+| R-08 | 003, 004, 005, 008   | 4/10  | settled                               |
 | R-09 | all ten              | 10/10 | settled                               |
 | R-10 | all but 008          | 9/10  | settled                               |
 | R-11 | 007                  | 1/10  | #provisional                          |
